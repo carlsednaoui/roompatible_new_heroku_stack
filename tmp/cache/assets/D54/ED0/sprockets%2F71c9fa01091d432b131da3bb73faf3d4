@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@value{	"_version"%7f1683d4ca74f0b147bb8ec1dcab1d13"digest"%fb48ee84418a041a6e2affc54030dea6"lengthiרג"source"רג/*
+o: ActiveSupport::Cache::Entry	:@value{	"_version"%e52dfae6a50fa5c8fe60cda723bbe87d"digest"%5ef4acb6b605079d8b5d7a2d1d60cecd"lengthiד"source"ד/*
 */
 
 /*!
@@ -2527,7 +2527,8 @@ Rails input CSS
 }
 
 #flash_notice {
-  background-color: #CFC;
+  background-color: #4169E1;
+	color: white;
   border: solid 1px #6C6;
 }
 
@@ -2584,8 +2585,8 @@ Rails input CSS
   font-size: 1em;
   margin: -7px;
   margin-bottom: 0px;
-  background-color: red;
-  color: #fff;
+  background-color: #DCDCDC;
+  color: black;
 }
 
 #error_explanation ul li {
@@ -2595,7 +2596,7 @@ Rails input CSS
 
 .field_with_errors {
 	padding: 2px;
-	background-color: red;
+	background-color: #DCDCDC;
 	display: table;
 }
 
@@ -2638,4 +2639,4 @@ Room Listing
 	font-size: 2em;
 	margin-bottom: 0em;
 }
-:@expires_in0:@compressedF:@created_atf1325018998.323005 ¬
+:@expires_in0:@compressedF:@created_atf1325026680.6117499 &י

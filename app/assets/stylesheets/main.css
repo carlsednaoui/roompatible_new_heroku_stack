@@ -192,8 +192,8 @@ Rails input CSS
   font-size: 1em;
   margin: -7px;
   margin-bottom: 0px;
-  background-color: red;
-  color: #fff;
+  background-color: #DCDCDC;
+  color: black;
 }
 
 #error_explanation ul li {
@@ -203,7 +203,7 @@ Rails input CSS
 
 .field_with_errors {
 	padding: 2px;
-	background-color: red;
+	background-color: #DCDCDC;
 	display: table;
 }
 
