@@ -23,8 +23,15 @@ gem "gmaps4rails"
 gem "kaminari"
 gem "paperclip"
 
-gem "pg"
-gem 'thin'
+group :development, :test do
+	gem 'sqlite3'
+	gem "sqlite3-ruby"
+end
+
+group :production do
+	gem 'pg'
+	gem 'thin'
+end
 
 gem 'execjs'
 gem 'therubyracer'
