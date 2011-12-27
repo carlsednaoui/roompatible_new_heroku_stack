@@ -1,8 +1,12 @@
 //= require jquery
+//= require prototype.js
+//= require effects.js
+//= require controls.js
 //= require jquery_ujs
 //= require_self
 //= require_tree .
-//= require gmaps4rails/gmaps4rails.googlemaps.js
+//= require gmaps4rails/googlemaps.js
+
 
 
 // Place your application-specific JavaScript functions and classes here
