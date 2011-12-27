@@ -1,0 +1,8 @@
+Quiz.destroy_all
+User.destroy_all
+Question.destroy_all
+Trait.destroy_all
+QuizAttempt.destroy_all
+QuizAttemptResponse.destroy_all
+Room.destroy_all
+Roommate.destroy_all

@@ -1,0 +1,37 @@
+<h1>Listing questions</h1>
+
+<table>
+  <tr>
+    <th>Quiz</th>
+    <th>Prompt</th>
+    <th>Choice 1</th>
+    <th>Choice 2</th>
+    <th>Choice 3</th>
+    <th>Choice 4</th>
+    <th>Choice 5</th>
+    <th>Total Choices</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @questions.each do |question| %>
+  <tr>
+    <td><%= question.quiz_id %></td>
+    <td><%= question.prompt %></td>
+    <td><%= question.choice_1 %></td>
+    <td><%= question.choice_2 %></td>
+    <td><%= question.choice_3 %></td>
+    <td><%= question.choice_4 %></td>
+    <td><%= question.choice_5 %></td>
+    <td><%= question.total_choices %></td>
+    <td><%= link_to 'Show', question %></td>
+    <td><%= link_to 'Edit', edit_question_path(question) %></td>
+    <td><%= link_to 'Destroy', question, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Question', new_question_path %>

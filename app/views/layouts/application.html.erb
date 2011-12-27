@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Roompatible - Find the perfect roommate!</title>
+        <meta name="description" content="Easily find compatible roommates in New York with Roompatible." /> 
+        <%= javascript_include_tag "application" %>
+        <%= csrf_meta_tag %>
+
+        <!--Main CSS Stylesheet is below - saved in public/stylesheets-->
+        <%= stylesheet_link_tag "application" %>
+        <%= stylesheet_link_tag "main" %>
+        <%= stylesheet_link_tag "gmaps4rails" %>
+
+        <!--Below is the Google Analytics tracking code-->
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-25123782-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+             })();
+
+         </script>
+         <!--Above is the Google Analytics tracking code-->
+
+         <!--Below is the code for GetSatisfaction-->
+         <script type="text/javascript" charset="utf-8">
+             var is_ssl = ("https:" == document.location.protocol);
+             var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
+             document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
+             </script>
+
+             <script type="text/javascript" charset="utf-8">
+                 var feedback_widget_options = {};
+
+feedback_widget_options.display = "overlay";  
+feedback_widget_options.company = "roompatible";
+feedback_widget_options.placement = "left";
+feedback_widget_options.color = "#4682B4";
+feedback_widget_options.style = "idea";
+var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
+</script>
+<!--Above is the code for GetSatisfaction-->
+
+<!--Below is the code for G+-->
+    <link href="https://plus.google.com/111913731109835714898" rel="publisher" />
+<!--Above is the code for G+-->
+
+ <!--Below is the code for Facebook-->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=171269152959002";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+ <!--Above is the code for Facebook-->
+
+</head>
+<body>
+    <div class="topbar">
+        <div class="fill">
+            <div class="container">
+                <div id="logo">
+                    <%= link_to image_tag("roompatible-logo.png"), "/" %>
+                </div>
+                <ul class="nav secondary-nav">
+                    <li><%= link_to "Find a Room", :controller => "rooms"%></li>
+                    <li><%= link_to "Browse Roommates", :controller => "roommates"%></li>
+                    <li><a href="/how-it-works">How it works</a></li>
+                    <% if current_user %>
+                        <li><%= link_to "Sign Out", signout_path, :id => "sign-out" %></li>
+                    <% else %>
+                        <li><a id="sign-in" href="/sign-up">Sign Up</a></li>
+                    <% end %>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--Below is where the Rails code will generate-->
+    <div class="container main">
+        <div class="content">
+            <!--Validation is below-->
+            <div class="validation span16">
+                <% flash.each do |key, value|%>
+                    <div id="flash_<%= key %>">
+                        <%= value %>
+                    </div>
+                <% end %>
+            </div>
+            <!--Validation is above-->
+            <div class="row">
+                <div class="span12 quick-nav">
+
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-text="Roompatible - Find a compatible roommate." data-count="none" data-via="roompatible">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script> 
+
+   
+                    <a href="https://plus.google.com/111913731109835714898?prsrc=3" style="text-decoration:none;"><img src="https://ssl.gstatic.com/images/icons/gplus-32.png" alt="" style="border:0;width:25px;height:25px;"/></a>
+
+                    <div class="fb-like" data-href="https://www.facebook.com/roompatible" data-send="true" data-width="500" data-show-faces="false"></div>
+
+                </div>
+                <div class="span4 quick-nav">
+                    <% if current_user %>
+                        <%= link_to "#{current_user.name}'s ", dashboard_path %><%= link_to image_tag("home.png"), "/dashboard" %>
+                        <% @unread_messages = current_user.unread_messages %>
+                        <% if @unread_messages.size.eql? 0 %>
+                        <% else %>
+                            <%= @unread_messages.size %>
+                        <% end %>
+                    <% else %>
+                        Quick login: <%= link_to image_tag("t-logo.png"), "http://www.roompatible.com/auth/twitter" %> <%= link_to image_tag("f-logo.png"), "http://www.roompatible.com/auth/facebook" %>
+                    <% end %>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span16">
+                    <div class="rails">
+                        <%= yield %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Above is where the Rails code will generate-->	
+        <footer>
+        <p>
+        <strong>Note: To avoid potential scams, only deal with people you can meet locally and in person.</strong> <a href="/">Roompatible</a> works best in <a href="http://www.google.com/chrome" target="_blank">Chrome</a>.
+        <br />
+        Roompatible © +1-646-543-0583. All Rights Reserved. 
+        <br />
+        <a href="/contact">About Roompatible</a>
+        </p>
+        <%= yield :scripts %>
+        </footer>
+    </div>
+</body>
+</html>

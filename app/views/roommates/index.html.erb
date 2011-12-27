@@ -1,0 +1,55 @@
+<div class="row">
+    <h1 class="span12">People Looking for Rooms</h1><br/>
+    <h3 class="span12">Didn't fint the perfect room yet? No worries, leave a roommate post here.</h3>
+    <div class="span4">
+        <%= link_to 'Create A Roommate Post', new_roommate_path, :class => "btn large success padding" %>
+    </div>
+</div>
+
+<br />
+
+<ol class="row">
+    <% @roommates.each do |roommate| %>
+        <div class="span2">
+            <li class="room_index">
+            <% if roommate.user.provider.eql? "twitter" %>
+                <%= link_to image_tag("http://api.twitter.com/1/users/profile_image/#{roommate.user.uid}?size=bigger", :size => "75x75", :class => "user_picture"), roommate %>
+            <% elsif roommate.user.provider.eql? "facebook" %>
+                <%= link_to image_tag("http://graph.facebook.com/#{roommate.user.uid}/picture?type=normal", :size => "75x75", :class => "user_picture"), roommate %>
+            <% end %>
+        </div>
+
+        <div class="span10">
+        <%= link_to(roommate) do %><strong><%= "$" + roommate.rent.to_s + " - " + roommate.name %></strong><%end%>
+            <div class="room-list-description"><%= roommate.about %></div>
+            <% if roommate.desired_living_area.present? %>
+                Desired living area: <%= roommate.desired_living_area %>
+            <% end %>
+            </li>
+        </div>
+        <div class="span4">
+            <% if roommate.user == current_user %>
+        <p>
+                <%= link_to 'Edit Post', edit_roommate_path(roommate) %> |
+                <%= link_to 'Delete Post', roommate, :confirm => 'Are you sure you want to delete this Room listing?', :method => :delete %>
+        </p>  
+        <br />
+            <% elsif current_user %>
+                <h1><%= CompatibilityAlgorithm.get_score(current_user.id, roommate.user_id).to_i %>% <small>Roompatible</small></h1>
+            <% else %>
+                <h4>For Roompatibility Score</h4>
+                <a class="btn primary padding" href="/sign-up">Log In/ Sign up</a>
+            <% end %>
+        <br />
+        <br />
+        <br />
+        </div>
+    <% end %>
+</ol>
+
+<div class="row">
+<div class="span16">
+<%= paginate @roommates %>
+</div>
+</div>
+

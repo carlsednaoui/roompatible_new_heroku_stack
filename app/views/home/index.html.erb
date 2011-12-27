@@ -1,0 +1,34 @@
+<h1>Roompatible helps you find compatible roommates</h1>
+<p>No more creepy Craigslist posts. No more moving in with total strangers.</p>
+    <br />
+<div class="row">
+    <div class="span12">
+        <%= link_to image_tag("roompatible-3-steps.png"), "/sign-up" %>
+    </div>
+    <div class="span4">
+    <br />
+        <% if current_user %>
+        <% else %>
+            <a class="btn large primary padding" href="/sign-up">Log In/ Sign up</a>
+        <% end %>
+    </div>
+    <div class="span4">
+        <a href="/rooms" class="btn large default padding">View all Rooms</a>
+        <% if current_user %>
+            <a href="/rooms/new" class="btn large primary padding">Submit a Room</a>
+        <% else %>
+        <% end %>
+    </div>
+</div>
+<h1 class="offset1"><small>*Spamming is wack. We will <strong>never</strong> Tweet, post, or share anything on your behalf.<small></h1>
+    <br />
+<div class="row">
+<p class="span16">Roompatible is the free and easy way to find compatible roommates. Simply log in with Facebook or Twitter, answer a few questions and you are ready to go. You will be all set in under 2 minutes!</p>
+</div>
+
+    <br />
+
+<div class"span16">
+<p>We are new in town! Want to help us out and gain karma points? <a href="http://www.roompatible.com/rooms">Post a room</a> or send us your feedback.</p>
+<p>Roompatible is only available in New York (for now), however, if you would like to see us launch in your city soon, please <a href="https://docs.google.com/spreadsheet/embeddedform?formkey=dGd4WkwycGxuQ1F0UFlwYUpsWnlIb2c6MQ" target="_blank">vote for your city</a>.</p>
+</div>

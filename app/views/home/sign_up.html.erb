@@ -1,0 +1,35 @@
+<h1>Signing up for Roompatible is easy</h1>
+<div class="clearfix">
+    <div class="row">
+        <div class="span16">
+            <div class="span10">
+                <p class="padding">All you need to do is either log in with Twitter or Facebook.</p>
+                <div class="span16">
+                    <% unless current_user %>
+                        <%= link_to image_tag("sign-in-with-twitter-d.png", :class => "span-5 padding"), "http://www.roompatible.com/auth/twitter" %>
+						<%= link_to image_tag("login-with-facebook.png", :class => "span-5 padding"), "http://www.roompatible.com/auth/facebook" %>
+                    <% end %></div>
+                <br />
+                <p>Upon logging in for the first time, you will be asked to answer a few questions. Based on your answers, we calculate how compatible you are with others on Roompatible. Completing all the questions should take you <b>less than 2 minutes.</b></p>
+                <br />
+                <p>We will <strong>never</strong> Tweet, post, or share anything on your behalf. Also, Roompatible uses safe authentication, this means that all of
+                your information is secure.</p>
+                <br /><p>Happy roommate hunting!</p>
+
+            </div>
+            <div class="span5">
+
+                <div class="fb-like-box" data-href="http://www.facebook.com/roompatible" data-width="292" data-show-faces="true" data-stream="false" data-header="true"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=171269152959002";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>

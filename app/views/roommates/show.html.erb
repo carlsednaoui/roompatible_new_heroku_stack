@@ -1,0 +1,179 @@
+<div class="clearfix">
+    <div class="row">
+        <div class="span16">
+            <% if current_user.present? %>
+                <% if @roommate.user_id == current_user.id %>
+                    <%= link_to 'Back', roommates_path, :class => "btn default padding" %> |
+                    <%= link_to 'Edit', edit_roommate_path, :class => "btn info padding" %>
+                <% else %>
+                    <%= link_to 'Back', roommates_path, :class => "btn default padding" %>
+                <% end %>
+            <% else %>
+                <%= link_to 'Back', roommates_path, :class => "btn default padding" %>
+            <% end %>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<div class="clearfix">
+    <div class="row">
+        <div class="span16">
+            <p class="room-title"><b>
+                <%= @roommate.name %>
+                <br />
+            </b></p>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<div class="clearfix">
+    <div class="row">
+        <div class="span16">
+            <div class="span10">
+                <div class="row">
+                    <div class="span2"> 
+                        <% if current_user %>
+                            <% if @roommate.user.provider.eql? "twitter" %>
+                                <%= link_to image_tag("http://api.twitter.com/1/users/profile_image/#{@roommate.user.uid}?size=bigger", :size => "75x75", :class => "user_picture"), "http://www.twitter.com/#{@roommate.user.nickname}", :target => "_blank" %>
+                                <h2 class="user_picture"><small><%= link_to "View Profile", "http://www.twitter.com/#{@roommate.user.nickname}", :target => "_blank" %></small></h2>
+                            <% elsif @roommate.user.provider.eql? "facebook" %>
+                                <%= link_to image_tag("http://graph.facebook.com/#{@roommate.user.uid}/picture?type=normal", :size => "75x75", :class => "user_picture"), "http://www.facebook.com/#{@roommate.user.uid}", :target => "_blank" %>
+                                <h2 class="user_picture"><small><%= link_to "View Profile", "http://www.facebook.com/#{@roommate.user.uid}", :target => "_blank" %></small></h2>
+                            <% end %>
+                        <% end %>
+                    </div>
+                    <div class="span8">
+                        <p>
+                    <b>I am a </b> <% if @roommate.age.present? %><%= @roommate.age %> Years-young <% end %><%= @roommate.sexual_orientation %> <%= @roommate.gender %><br />
+                        <b>Looking to live with a </b>
+                        <%= @roommate.desired_gender %> roommate(s) <br />
+                        </p>
+                    </div>
+                </div>
+
+    <br />
+
+                <div class="row">
+                <div class="span10">
+                    <p>
+                    <b>Max room budget: </b>
+                    $<%= @roommate.rent %><br />
+                    <b>Desired move-in date </b><i>(YMD)</i>:
+                    <%= @roommate.desired_move_in_date %><br />
+                    <br />
+                    <b>The max number of roommates I am willing to have is </b><%= @roommate.max_renters %><br />
+                <% if @roommate.desired_living_area.present? %><b>Ideally, I would like to live in: </b><%= @roommate.desired_living_area %><% end %>
+                    </p>
+                </div>
+            </div>
+            </div>
+
+            <div class="span5">
+                <% if @roommate.user == current_user %>
+                    <p>
+                    Frozen Banana Splits, this is your Roommate post!
+                    <br />
+                    <br />
+                    Why don't you share this with your friends? Maybe someone you know is looking for a roommate!
+                    <br />
+                    </p>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-text="Roompatible - Find a compatible roommate." data-count="none" data-via="roompatible">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+                    
+                    <a href="https://plus.google.com/111913731109835714898?prsrc=3" style="text-decoration:none;"><img src="https://ssl.gstatic.com/images/icons/gplus-32.png" alt="" style="border:0;width:25px;height:25px;"/></a>
+
+                    <div class="fb-like" data-href="https://www.facebook.com/roompatible" data-send="false" data-layout="button_count" data-width
+                        ="100" data-show-faces="false"></div>
+
+                <% elsif current_user %>
+                    <h2>Compatibility  
+                    <% if @score >= 90 %>
+                        <%= image_tag("sun.png") %>
+                    <% elsif @score >=70 && @score <= 89%>
+                    	<%= image_tag("halfsun.png") %>
+                    <% elsif @score >=50 && @score <= 69%>
+                    	<%= image_tag("cloud.png") %>
+                    <% elsif @score >=30 && @score <= 49%>
+                    	<%= image_tag("rain.png") %>
+                    <% elsif @score <= 29%>
+                    	<%= image_tag("thunder.png") %>
+                    <% end %>
+                    </h2>
+                    <p>
+                    Cleanliness: <%= @cleanliness %> <br />
+                    Sociability: <%= @sociability %> <br />
+                    Lifestyle: <%= @lifestyle %> <br />
+                    Roommate Expectations: <%= @expectation %> <br />
+                    <strong>Overall Roompatibility: <%= @score %>%</strong> <br />
+                    </p>
+                    <%= link_to 'Get in Touch', new_message_path(:to_user_id => @roommate.user_id), :class => "btn large success padding" %>
+                <% else %>
+                    Please log in to see compatibility details and get in touch with this person.
+                    <br />
+                    <br />
+                    <a class="btn large primary" href="/sign-up">Log In/ Sign up</a>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<div class="clearfix">
+    <h2> <%= image_tag("dog.png") %> Pets</h2>
+    <div class="row">
+        <ol class="span16">
+            <li class="span16"><% if @roommate.has_pets == true %>
+                <%= image_tag("button_true.png") %> I do have a pet (or pets)
+            <% else %>
+                <%= image_tag("button_false.png") %> I do not have any pets
+            <% end %></li>
+
+            <li class="span16"><% if @roommate.willing_to_live_with_pets == true %>
+                <%= image_tag("button_true.png") %> I am willing to live with pets
+            <% else %>
+                <%= image_tag("button_false.png") %> Sorry, I am not willing to live with pets
+            <% end %></li>
+        </ol>
+    </div>
+</div>
+
+<br />
+
+<div class="clearfix">
+    <h2> <%= image_tag("cig.png") %> Smokes</h2>
+    <div class="row">
+        <ol class="span16">
+            <li class="span16"><% if @roommate.does_smoke == true %>
+                <%= image_tag("button_true.png") %> I do smoke
+            <% else %>
+                <%= image_tag("button_false.png") %> I do not smoke
+            <% end %></li>
+
+            <li class="span16"><% if @roommate.willing_to_live_with_smoker == true %>
+                <%= image_tag("button_true.png") %> I am willing to live with a smoker
+            <% else %>
+                <%= image_tag("button_false.png") %> Sorry, I am not willing to live with a smoker
+            <% end %></li>
+        </ol>
+    </div>
+</div>
+
+<br />
+
+<div class="clearfix">
+    <h2><%= image_tag("crayon.png") %> A little bit more about me:</h2>
+    <div class="row">
+        <div class="span16">
+            <div class="span16">
+                <div class="span16">
+                    <p><%= @roommate.about %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Quiz:</b>
+  <%= @question.quiz_id %>
+</p>
+
+<p>
+  <b>Prompt:</b>
+  <%= @question.prompt %>
+</p>
+
+<p>
+  <b>Choice 1:</b>
+  <%= @question.choice_1 %>
+</p>
+
+<p>
+  <b>Choice 2:</b>
+  <%= @question.choice_2 %>
+</p>
+
+<p>
+  <b>Choice 3:</b>
+  <%= @question.choice_3 %>
+</p>
+
+<p>
+  <b>Choice 4:</b>
+  <%= @question.choice_4 %>
+</p>
+
+<p>
+  <b>Choice 5:</b>
+  <%= @question.choice_5 %>
+</p>
+
+<p>
+  <b>Trait</b>
+  <%= @question.trait %>
+</p>
+<p>
+  <b>Total Choicest</b>
+  <%= @question.total_choices %>
+</p>
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>

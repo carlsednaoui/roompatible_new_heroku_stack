@@ -1,0 +1,102 @@
+<div class="form">
+    <%= form_for(@roommate) do |f| %>
+        <% if @roommate.errors.any? %>
+            <div id="error_explanation">
+                <h2><%= pluralize(@roommate.errors.count, "error") %> prohibited this roommate from being saved:</h2>
+
+                <ul>
+                    <% @roommate.errors.full_messages.each do |msg| %>
+                        <li><%= msg %></li>
+                    <% end %>
+                </ul>
+            </div>
+        <% end %>
+
+    <br />
+
+        <h2 class="padding"> <%= image_tag("chat.png") %> Introductions</h2>
+        <div class="form-stacked">
+            <div class="clearfix">
+                <%= f.label :name, "Post title (or your name)" %>
+                <%= f.text_field :name, :class => "span8" %>
+            </div>
+
+            <div class="clearfix">
+                <%= f.label :rent, "Max monthly rent" %>
+                $<%= f.text_field :rent, :class => "span2" %>
+            </div>
+
+            <div class="clearfix">
+                <%= f.label :gender, "I am a" %>
+                <%= f.text_field :age, :class => "span2" %> years old
+                <%= f.select :sexual_orientation, @sexual_orientation, {}, {:class => "span3"} %>
+                <%= f.select :gender, @gender, {}, {:class => "span3"} %>
+            </div>
+
+            <div class="clearfix">
+                <%= f.label :desired_gender, "Looking to live with a" %>
+                <%= f.select :desired_gender, @desired_gender, {}, {:class => "span3"} %> roommate
+            </div>
+    
+    <br />
+
+            <div class="clearfix">
+                <%= f.label :max_renters, "The max amount of roommates I am willing to have is:" %>
+                <%= f.select :max_renters, @max_renters, {}, {:class => "span2"} %> other roommate(s)
+            </div>
+
+             <div class="clearfix">
+                <%= f.label :desired_move_in_date, "Desired move-in date:" %>
+                <%= f.date_select :desired_move_in_date, {:order => [:month, :day, :year]}, {:class => "span2"} %>
+            </div>
+
+ <br />
+
+             <div class="clearfix">
+                <%= f.label :desired_living_area, "Desired living area: (*optional)" %>
+                <%= f.text_field :desired_living_area, :class => "span3" %>
+            </div>
+
+       </div>
+
+        <br />
+
+        <div class="form">
+            <div class="clearfix">
+                <h2> <%= image_tag("dog.png") %> Pets <small>(check all that apply)</small></h2>
+                <div class="row span16">
+                    <div class="span6">
+                        <%= f.check_box :has_pets %> <%= f.label :has_pets, "I do have a pet (or pets)" %><br />
+                        <%= f.check_box :willing_to_live_with_pets %> <%= f.label :willing_to_live_with_pets, "I am willing to live with a pet (or pets)" %><br />
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="clearfix">
+                <h2> <%= image_tag("cig.png") %> Smokes <small>(check all that apply)</small></h2>
+                <div class="row span16">
+                    <div class="span6 padding">
+                    <%= f.check_box :does_smoke %> <%= f.label :does_smoke, "I smoke cigarettes and/ or other things" %><br />
+                    <%= f.check_box :willing_to_live_with_smoker %> <%= f.label :willing_to_live_with_smoker, "I am willing to live with a smoker" %><br />
+                </div>
+                </div>
+                </div>
+
+            <div class="clearfix">
+                <h2> <%= image_tag("crayon.png") %> Tell us a bit more about you</h2>
+                <div class="row span16">
+                    <div class="span5 padding">
+                        <%= f.text_area :about, :class => "xxlarge", :placeholder => "Tell us what you do for a living, in which industry are you currently working or studying, what you usually do for fun... let your personality shine :)" %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <%= f.submit "Submit", :class => "btn large primary" %>
+        </div>
+    <% end %>
+</div>
+<br />
+<br />

@@ -1,0 +1,36 @@
+<h1>Let's get to know each other!</h1>
+<h2><%= image_tag("clock.png") %> This will take you less than 2 minutes to complete.</h2>
+
+<br />
+
+<div class="span16">
+<form name="user[name]" action="/complete" method="get" class="form-stacked">
+<% @form_questions.each do |question|%>
+    <%= question.prompt %> <br />
+    <ul class="inputs-list take-quiz">
+    <div class="span16">
+    <% unless question.choice_1.nil? or question.choice_1.empty?%>
+    <li><label> <input type="radio" name="question[<%= question.id %>]" value="a" checked><%= " " + question.choice_1 %> </label></li>
+    <% end %>
+    <% unless question.choice_2.nil? or question.choice_2.empty?%>
+    <li><label> <input type="radio" name="question[<%= question.id %>]" value="b"><%= " " + question.choice_2 %> </label></li>
+    <% end %>
+    <% unless question.choice_3.nil? or question.choice_3.empty?%>
+    <li><label> <input type="radio" name="question[<%= question.id %>]" value="c"><%= " " + question.choice_3 %> </label></li>
+    <% end %>
+    <% unless question.choice_4.nil? or question.choice_4.empty?%>
+    <li><label> <input type="radio" name="question[<%= question.id %>]" value="d"><%= " " + question.choice_4 %> </label></li>
+    <% end %>
+    <% unless question.choice_5.nil? or question.choice_5.empty?%>
+    <li><label> <input type="radio" name="question[<%= question.id %>]" value="e"><%= " " + question.choice_5 %> </label></li>
+    <% end %>
+    <br />
+    </div>
+    </ul>
+    <br />
+<% end %>
+    <input type="hidden" name="quiz_attempt_id" value="<%= @quiz_attempt.id %>" />
+    <input type="hidden" name="origin" value="<%= @origin %>" />
+<input type="submit" value="I'm all done!" class="btn large primary"/>
+</form>
+</div>

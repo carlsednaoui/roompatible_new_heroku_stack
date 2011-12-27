@@ -1,0 +1,27 @@
+<h1><%=current_user.name.capitalize%>'s Conversation</h1>
+<div class="clearfix">
+    <div class="row">
+        <div class="span16">
+            <div class="span10">
+                <% @view_conversation.each do |message| %>
+                    <b><%= User.find_by_id(message.from_user_id).name %>:</b>
+                    <%= message.created_at.time.to_date %> 
+                    <br />
+                    <%= message.body %><br />
+                    <br />
+                <% end %>
+            </div>
+
+            <div class="row">
+                <div class="span5">
+                        Overall Roompatibility: <%= @score %> <br />
+                        Cleanliness: <%= @cleanliness %> <br />
+                        Sociability: <%= @sociability %> <br />
+                        Lifestyle: <%= @lifestyle %> <br />
+                        Roommate Expectations: <%= @expectation %> <br />
+                        <%= link_to 'Reply to Message', new_message_path(:from_user_id => current_user.id, :to_user_id => @message_reply_to_user_id ,:conversation_id => @current_message_conversation_id), :class => "btn large success padding" %><br />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

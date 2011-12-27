@@ -1,0 +1,151 @@
+<div class="form">
+    <%= form_for @room, :html => { :multipart => true } do |f| %>
+        <% if @room.errors.any? %>
+            <div id="error_explanation">
+                <h2><%= pluralize(@room.errors.count, "error") %> prohibited this room from being saved:</h2>
+
+                <ul>
+                    <% @room.errors.full_messages.each do |msg| %>
+                        <li><%= msg %></li>
+                    <% end %>
+                </ul>
+            </div>
+        <% end %>
+
+        <div class="form-stacked">
+            <div class="clearfix">
+                <%= f.label :title, "Room post title" %>
+                <%= f.text_field :title, :class => "span8" %>
+            </div>
+
+            <div class="clearfix">
+                <%= f.label :price %>
+                <%= f.text_field :price, :class => "span2" %>
+                <%= f.select :price_per_week_month, @price_per_week_month, {}, {:class => "span2"} %>
+            </div>
+
+            <div class="clearfix">
+                <%= f.label :desired_move_in_date, "Desired move-in date:" %>
+                <%= f.date_select :desired_move_in_date, {:order => [:month, :day, :year]}, {:class => "span2"} %>
+            </div>
+
+            <div class="clearfix">
+                <%= f.label :desired_gender, "Looking for a" %>
+                <%= f.select :desired_gender, @desired_gender, {}, {:class => "span3"} %> roommate
+            </div>
+
+            <div class="clearfix">
+                <%= f.label :desired_length_of_stay_number, "Desired length of stay" %>
+                <%= f.select :desired_length_of_stay_number, @desired_length_of_stay_number, {}, {:class => "span2"} %>
+                <%= f.select :desired_length_of_stay_week_month, @desired_length_of_stay_week_month, {}, {:class => "span2"} %>
+                <%= f.select :desired_length_of_stay_more_less, @desired_length_of_stay_more_less, {}, {:class => "span2"} %>
+            </div>
+        </div>
+
+        <div class="clearfix">
+            <div class="row span16">
+                <%= f.check_box :couples_allowed %>
+                <%= f.label :couples_allowed, "Couple are allowed (check if applicable)" %>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="clearfix">
+            <h2> <%= image_tag("tv.png") %> Amenities <small>(check all that apply)</small></h2>
+            <div class="row span16">
+                <div class="span5">
+                    <%= f.check_box :amenities_ac %> <%= f.label :amenities_ac, "Air Conditioning" %><br />
+                    <%= f.check_box :amenities_heater %> <%= f.label :amenities_heater, "Heater" %><br />
+                    <%= f.check_box :amenities_cable_tv %> <%= f.label :amenities_cable_tv, "Cable TV" %><br />
+                    <%= f.check_box :amenities_internet %> <%= f.label :amenities_internet, "Internet" %><br />
+                </div>
+                <div class="span5">
+                    <%= f.check_box :amenities_kitchen %> <%= f.label :amenities_kitchen, "Access to a Kitchen" %><br />
+                    <%= f.check_box :amenities_washer %> <%= f.label :amenities_washer, "Washer/ Dryer" %><br />
+                    <%= f.check_box :amenities_backyard %> <%= f.label :amenities_backyard, "Backyard" %><br />
+                    <%= f.check_box :amenities_balcony %> <%= f.label :amenities_balcony, "Balcony" %><br />
+                </div>
+                <div class="span5">
+                    <%= f.check_box :amenities_rooftop %> <%= f.label :amenities_rooftop, "Rooftop" %><br />
+                    <%= f.check_box :amenities_elevator %> <%= f.label :amenities_elevator, "Building Elevator" %><br />
+                    <%= f.check_box :smoking_on_premise %> <%= f.label :smoking_on_premise, "There are smokers in the house" %><br />
+                    <%= f.check_box :smoking_allowed %> <%= f.label :smoking_allowed, "Smoking is allowed" %><br />
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="clearfix">
+            <h2> <%= image_tag("dog.png") %> Pets <small>(check all that apply)</small></h2>
+            <div class="row span16">
+                <div class="span5">
+                    <%= f.check_box :pets_on_premise %> <%= f.label :pets_on_premise, "We have pets that live with us" %><br />
+                    <%= f.check_box :pets_allowed %> <%= f.label :pets_allowed, "Pets are allowed" %><br />
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="clearfix">
+            <h2> <%= image_tag("crayon.png") %> Room Description</h2>
+            <br />
+            <div class="row span16">
+                <div class="span5">
+                    <%= f.text_area :description, :class => "xxlarge" %>
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="clearfix">
+            <h2> <%= image_tag("globe.png") %> Address</h2>
+            <br />
+            <div class="form-stacked">
+                <%= f.label :address, "Please insert the room's address (or nearby street intersection)" %>
+                <%= f.text_field :address, :class => "span8" %>
+                <span class="help-block">Note: The exact address will not be displayed, we will show a nearby area. See example below.</span>
+                <br />
+                <div class="span16">
+                    <strong>Address Example:</strong>
+                    <br />
+                    <%= image_tag("map_example.png") %>
+                </div>
+            </div>
+        </div>
+<!--
+        <div class="clearfix">
+            <h2> <<%= image_tag("camera.png") %> Pictures</h2>
+            <p class="padding">You know what they say: "A picture is worth 1000 words."</p>
+            <% f.fields_for :assets do |asset_fields| %>
+
+                <% if asset_fields.object.new_record? %>
+                    <p>
+                    <%= asset_fields.file_field :asset %>
+                    </p>
+                <% end %>
+            <% end %>
+
+            <%= f.fields_for :assets do |asset_fields| %>
+
+                <% unless asset_fields.object.new_record? %>
+                    <p>
+                    <%= link_to image_tag(asset_fields.object.asset.url(:small)), asset_fields.object.asset.url(:original) %>
+                    <%= asset_fields.check_box :_destroy%><%= asset_fields.label :_destroy, " Delete this photo"%>
+                    </p>
+                <% end %>
+            <% end %>
+
+        </div>
+-->
+
+        <div class="actions">
+            <%= f.submit "Submit", :class => "btn large primary" %>
+        </div>
+    <% end %>
+</div>
+<br />
+<br />

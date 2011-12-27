@@ -1,0 +1,10 @@
+<h2>Send your message below:</h2>
+<br />
+<form name="initiate-conversation" action="/message_sent" method="get">
+<textarea rows="10" cols="30" name="body" class="xxlarge">
+</textarea>
+<div class="padding"></div>
+    <input type="hidden" name="from_user_id" value="<%= current_user.id %>" />
+    <input type="hidden" name="to_user_id" value="<%= @to_user_id %>" /><br />
+<input type="submit" value="Send Message" class="btn large primary padding"/>
+</form>

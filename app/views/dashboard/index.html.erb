@@ -1,0 +1,83 @@
+<div class="row">
+    <div class="span12">
+        <h1><%=current_user.name.capitalize%>'s Dashboard <br/>
+            <small>Find your Messages, Room Listings and Roommate Posts below</small></h1>
+    </div>
+    <div class="span4">
+        <a href="/take" class="btn large danger">Re-answer Questions</a>
+    </div>
+</div>
+
+<h2><%= image_tag("message.png")%> Your Messages:</h2>
+<div class="row">
+    <% if @messages_to_display.eql? [] %>
+        <div class="span11 offset1">
+            You currently have no messages :(
+        </div>
+    <% else %>
+        <% @messages_to_display.each do |message| %>
+            <ol class="span11 offset1">
+                <li>
+                <% if message.from_user_id.eql? current_user.id %>
+                    <b><%= User.find_by_id(message.to_user_id).name %>:</b>
+                <% else %>
+                    <b><%= User.find_by_id(message.from_user_id).name %>:</b>
+                <% end %>
+                <%= message.created_at.time.to_date %>
+                <br />
+                <% link_to(message) do %>
+                    <%= message.body %>
+                <% end %><br />
+                </li>
+            </ol>
+            <div class="span4">
+                <% if message.from_user_id.eql? current_user.id %>
+                    <h1><%= CompatibilityAlgorithm.get_score(current_user.id, message.to_user_id).to_i %>% <small>Roompatible</small></h1>
+                <% else %>
+                    <h1><%= CompatibilityAlgorithm.get_score(current_user.id, message.from_user_id).to_i %>% <small>Roompatible</small></h1>
+                <% end %>
+            </div>
+        <% end %>
+    <% end %>
+</div>
+
+<br />
+<br />
+
+<h2><%= link_to image_tag("room.png"), "/rooms" %> Your Room Listings:</h2>
+<ol class="row">
+    <% @current_user_rooms.each do |room| %>
+        <div class="span11 offset1">
+            <li class="room-list">
+        <% link_to(room) do %><strong><%= "$" + room.price.to_s + " - " + room.title %></strong><%end%>
+            <p class="room-list-description"><%= room.description %><br />
+            <%= room.address %></p>
+            </li>
+            <br />
+        </div>
+        <div class="span4">
+            <br />
+            <%= link_to 'Edit Room', edit_room_path(room) %> | 
+            <%= link_to 'Delete Room', room, :confirm => 'Are you sure you want to delete this Room listing?', :method => :delete %>
+        </div>
+    <% end %>
+</ol>
+
+<h2><%= link_to image_tag("group.png"), "/roommates" %> Your Roommate Posts:</h2>
+<ol class="row">
+    <% @current_user_roommates.each do |roommate| %>
+        <div class="span11 offset1">
+            <li class="room-list">
+        <% link_to(roommate) do %><strong><%= "$" + roommate.rent.to_s + " - " + roommate.name %></strong><%end%>
+            <p class="room-list-description"><%= roommate.about %><br />
+            <%= roommate.desired_living_area %></p>
+            </li>
+            <br />
+        </div>
+        <div class="span4">
+            <br />
+            <%= link_to 'Edit Post', edit_roommate_path(roommate) %> |
+            <%= link_to 'Delete Post', roommate, :confirm => 'Are you sure you want to delete this Roommate post?', :method => :delete %>
+        </div>
+    <% end %>
+</ol>

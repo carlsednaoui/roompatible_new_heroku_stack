@@ -1,0 +1,284 @@
+<div class="clearfix">
+    <div class="row">
+        <div class="span16">
+            <% if current_user.present? %>
+                <% if @room.user_id == current_user.id %>
+                    <%= link_to 'Back', rooms_path, :class => "btn default padding" %> | 
+                    <%= link_to 'Edit', edit_room_path, :class => "btn info padding" %>
+                <% else %>
+                    <%= link_to 'Back', rooms_path, :class => "btn default padding" %>
+                <% end %>
+            <% else %>
+                <%= link_to 'Back', rooms_path, :class => "btn default padding" %>
+            <% end %>
+        </div>
+    </div>
+</div>
+
+<br />
+ 
+<div class="clearfix">
+    <div class="row">
+        <div class="span16">
+            <p class="room-title"><b>
+                $<%= @room.price %> -  <%= @room.title %>
+            </b></p>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<div class="clearfix">
+    <div class="row">
+        <div class="span16">
+            <div class="span2">
+
+        <% if current_user %>
+        
+                <% if @room.user.provider.eql? "twitter" %>
+                <%= link_to image_tag("http://api.twitter.com/1/users/profile_image/#{@room.user.uid}?size=bigger", :size => "75x75", :class => "user_picture"), "http://www.twitter.com/#{@room.user.nickname}", :target => "_blank" %>
+                <h2 class="user_picture"><small><%= link_to "View Profile", "http://www.twitter.com/#{@room.user.nickname}", :target => "_blank" %></small></h2>
+            <% elsif @room.user.provider.eql? "facebook" %>
+                <%= link_to image_tag("http://graph.facebook.com/#{@room.user.uid}/picture?type=normal", :size => "75x75", :class => "user_picture"), "http://www.facebook.com/#{@room.user.uid}", :target => "_blank" %>
+            <h2 class="user_picture"><small><%= link_to "View Profile", "http://www.facebook.com/#{@room.user.uid}", :target => "_blank" %></small></h2>
+            <% end %>
+            <% end %>
+            </div>
+            <div class="span8">
+                <p>
+                <b>Desired length of stay:</b>
+                <%= @room.desired_length_of_stay_number.to_s + " " + @room.desired_length_of_stay_week_month + " " + @room.desired_length_of_stay_more_less %> <br />
+                <b>Desired move-in date </b><i>(YMD)</i>:
+                <%= @room.desired_move_in_date %><br />
+                <b>Looking for:</b> a
+                <%= @room.desired_gender %> roommate <br />
+                <b>Couples are:</b> 
+                <% if @room.couples_allowed == true %>
+                    allowed
+                <% else %>
+                    not allowed
+                <% end %>
+                </p>
+            </div>
+            <div class="span5">
+                <% if @room.user == current_user %>
+                    <p>
+                    Sweet frijoles, this is your Room!
+                        <br />
+                        <br />
+                    Why don't you share this with your friends? Maybe someone you know is looking for a room!
+                        <br />
+                    </p>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-text="Roompatible - Find a compatible roommate." data-count="none" data-via="roompatible">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+
+                    <a href="https://plus.google.com/111913731109835714898?prsrc=3" style="text-decoration:none;"><img src="https://ssl.gstatic.com/images/icons/gplus-32.png" alt="" style="border:0;width:25px;height:25px;"/></a>
+
+                    <div class="fb-like" data-href="https://www.facebook.com/roompatible" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+
+                <% elsif current_user %>
+                    <h2>Compatibility  
+                    <% if @score >= 90 %>
+                        <%= image_tag("sun.png") %>
+                    <% elsif @score >=70 && @score <= 89%>
+                        <%= image_tag("halfsun.png") %>
+                    <% elsif @score >=50 && @score <= 69%>
+                        <%= image_tag("cloud.png") %>
+                    <% elsif @score >=30 && @score <= 49%>
+                        <%= image_tag("rain.png") %>
+                    <% elsif @score <= 29%>
+                        <%= image_tag("thunder.png") %>
+                <% end %>
+                </h2>
+                    <p>
+                    Cleanliness: <%= @cleanliness %> <br />
+                    Sociability: <%= @sociability %> <br />
+                    Lifestyle: <%= @lifestyle %> <br />
+                    Roommate Expectations: <%= @expectation %> <br />
+                    <strong>Overall Roompatibility: <%= @score %>%</strong> <br />
+                    </p>
+                    <%= link_to 'Contact Room Owner', new_message_path(:to_user_id => @room.user_id), :class => "btn large success padding" %>
+<br />
+
+                <% else %>
+                    <p>
+                    Please log in to see compatibility details and get in touch with room owner.
+                    </p>
+                    <br />
+                    <a class="btn large primary" href="/sign-up">Log In/ Sign up</a>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="clearfix">
+    <h2> <%= image_tag("dog.png") %> Pets</h2>
+    <div class="row">
+        <ol class="span16">
+            <li class="span16"><% if @room.pets_on_premise == true %>
+                <%= image_tag("button_true.png") %> We do have pets living with us
+            <% else %>
+                <%= image_tag("button_false.png") %> We do not have any pets
+            <% end %></li>
+
+            <li class="span16"><% if @room.pets_allowed == true %>
+                <%= image_tag("button_true.png") %> Pets are welcome
+            <% else %>
+                <%= image_tag("button_false.png") %> Sorry, no pets allowed
+            <% end %></li> 
+        </ol>
+    </div>
+</div>
+
+<br />
+
+<div class="clearfix">
+    <h2><%= image_tag("crayon.png") %>Description:</h2>
+    <div class="row">
+        <div class="span16">
+            <div class="span16">
+                <div class="span16">
+                    <p><%= @room.description %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
+<br />
+
+<div class="clearfix">
+    <h2> <%= image_tag("tv.png") %> Amenities</h2>
+    <div class="row">
+        <ol class="room-amenities">
+            <div class="span5">
+                <li><% if @room.amenities_ac == true %>
+                    <%= image_tag("button_true.png") %>
+                <% else %>
+                    <%= image_tag("button_false.png") %>
+                <% end %>
+                Air Conditioning</li> 
+
+                <li><% if @room.amenities_heater == true %>
+   	                 <%= image_tag("button_true.png") %>
+	            <% else %>
+	                 <%= image_tag("button_false.png") %>
+                <% end %>
+                Heater</li>
+
+                <li><% if @room.amenities_cable_tv == true %>
+                        <%= image_tag("button_true.png") %>
+	                <% else %>
+	                    <%= image_tag("button_false.png") %>
+                <% end %>
+                Cable TV</li>
+
+                <li><% if @room.amenities_internet == true %>
+                        <%= image_tag("button_true.png") %>
+	                <% else %>
+	                    <%= image_tag("button_false.png") %>
+                <% end %>
+                Internet</li>
+            </div>
+
+            <div class="span5">
+                <li><% if @room.amenities_kitchen == true %>
+                        <%= image_tag("button_true.png") %>
+	                <% else %>
+	                    <%= image_tag("button_false.png") %>
+                <% end %>
+                Access to a Kitchen</li>
+
+                <li><% if @room.amenities_washer == true %>
+                        <%= image_tag("button_true.png") %>
+	                <% else %>
+	                    <%= image_tag("button_false.png") %>
+                <% end %>
+                Washer/ Dryer</li>
+
+                <li><% if @room.amenities_backyard == true %>
+                        <%= image_tag("button_true.png") %>
+	                <% else %>
+	                    <%= image_tag("button_false.png") %>
+                <% end %>
+                Backyard</li>
+
+                <li><% if @room.amenities_balcony == true %>
+                        <%= image_tag("button_true.png") %>
+	                <% else %>
+	                    <%= image_tag("button_false.png") %>
+                <% end %>
+                Balcony</li>
+            </div>
+
+            <div class="span5">
+                <li><% if @room.amenities_rooftop == true %>
+                        <%= image_tag("button_true.png") %>
+	                <% else %>
+	                    <%= image_tag("button_false.png") %>
+                <% end %>
+                Rooftop Access</li>
+
+                <li><% if @room.amenities_elevator == true %>
+                        <%= image_tag("button_true.png") %>
+	                <% else %>
+	                    <%= image_tag("button_false.png") %>
+                <% end %>
+                Building Elevator</li>
+
+                <li><% if @room.smoking_on_premise == true %>
+                        <%= image_tag("button_true.png") %>
+	                <% else %>
+	                    <%= image_tag("button_false.png") %>
+                <% end %>
+                Smokers in the house</li>
+
+                <li><% if @room.smoking_allowed == true %>
+                        <%= image_tag("button_true.png") %>
+	                <% else %>
+	                    <%= image_tag("button_false.png") %>
+                <% end %>
+                Smoking Allowed</li>
+            </div>
+        </ol>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="clearfix">
+        <% if @room.address.present? %>
+            <h2> <%= image_tag("globe.png") %> Map:</h2>
+            <br />
+            <div class="row">
+                <p class="span16">Room located in: <%= @city %></p>
+                <div class="span16">
+                    <%= gmaps({"circles" => {"data" => @circles_json }}) %>
+                    <br />
+                </div>
+            </div>
+        <% end %>
+    </div>
+
+
+
+<!--
+    <div class="clearfix">
+        <% if @room.assets.present? %>
+            <h2> <%= image_tag("camera.png") %> Pictures:</h2>
+            <br />
+            <% @room.assets.each do |picture| %> 
+            <div class="row">
+            <%= link_to image_tag(picture.asset.url(:medium)), picture.asset.url(:original)%>
+            </div>
+            <br />
+            <% end %>
+        <% end %>
+    </div>
+
+-->
+
+
+</div>
