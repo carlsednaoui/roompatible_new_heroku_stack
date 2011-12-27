@@ -1,10 +1,6 @@
 //= require jquery
-//= require prototype.js
-//= require effects.js
-//= require controls.js
 //= require jquery_ujs
 //= require_self
-//= require_tree .
 //= require gmaps4rails/googlemaps.js
 
 
