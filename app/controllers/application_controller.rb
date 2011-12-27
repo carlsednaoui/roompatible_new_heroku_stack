@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
 
 
 
-#  before_filter :ensure_domain
+  before_filter :ensure_domain
 
     APP_DOMAIN = 'www.roompatible.com'
     def ensure_domain
