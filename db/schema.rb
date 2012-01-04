@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111030001941) do
+ActiveRecord::Schema.define(:version => 20120104002437) do
 
   create_table "assets", :force => true do |t|
     t.string   "asset_file_name"
@@ -107,6 +107,7 @@ ActiveRecord::Schema.define(:version => 20111030001941) do
     t.string   "desired_living_area"
     t.integer  "user_id"
     t.date     "desired_move_in_date"
+    t.boolean  "roommate_active",             :default => true
   end
 
   create_table "rooms", :force => true do |t|
@@ -139,6 +140,7 @@ ActiveRecord::Schema.define(:version => 20111030001941) do
     t.string   "desired_length_of_stay_more_less"
     t.string   "contact_info"
     t.date     "desired_move_in_date"
+    t.boolean  "room_active",                       :default => true
   end
 
   create_table "traits", :force => true do |t|

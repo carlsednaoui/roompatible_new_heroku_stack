@@ -116,6 +116,18 @@
                 </div>
             </div>
         </div>
+
+
+	<div class="clearfix">
+            <h2>Room Status</h2>
+            <br />
+            <div class="form-stacked">
+		<%= f.label :room_active, "Room Status" %>
+		<%= f.select :room_active, {"Active" => true, "Hidden" => false}, {:class => "span2"} %>
+            </div>
+        </div>
+
+
 <!--
         <div class="clearfix">
             <h2> <<%= image_tag("camera.png") %> Pictures</h2>

@@ -3,7 +3,7 @@ class RoommatesController < ApplicationController
     before_filter :require_roommate_belongs_to_current_user, :only => [:edit, :update, :destroy]
   
 def index
-    @roommates = Roommate.all
+    @roommates = Roommate.find_all_by_roommate_active('t')
     @roommates = @roommates.sort_by{|e| e.updated_at}.reverse
     @roommates = Kaminari.paginate_array(@roommates).page(params[:page]).per(10)
 

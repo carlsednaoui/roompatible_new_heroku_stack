@@ -49,9 +49,15 @@
     <% @current_user_rooms.each do |room| %>
         <div class="span11 offset1">
             <li class="room-list">
-        <% link_to(room) do %><strong><%= "$" + room.price.to_s + " - " + room.title %></strong><%end%>
-            <p class="room-list-description"><%= room.description %><br />
-            <%= room.address %></p>
+        <%= link_to(room) do %><strong><%= "$" + room.price.to_s + " - " + room.title %></strong><%end%>
+            <p class="room-list-description">
+	    <% if room.room_active.eql? true %>
+		    Room Status: Active
+	<% elsif room.room_active.eql? false %>
+		Room Status: Hidden
+	<% end %><br />
+	<%= room.description %><br />
+	    <%= room.address %> </p>
             </li>
             <br />
         </div>
@@ -68,10 +74,16 @@
     <% @current_user_roommates.each do |roommate| %>
         <div class="span11 offset1">
             <li class="room-list">
-        <% link_to(roommate) do %><strong><%= "$" + roommate.rent.to_s + " - " + roommate.name %></strong><%end%>
-            <p class="room-list-description"><%= roommate.about %><br />
+        <%= link_to(roommate) do %><strong><%= "$" + roommate.rent.to_s + " - " + roommate.name %></strong><%end%>
+            <p class="room-list-description">
+ 	    <% if roommate.roommate_active.eql? true %>
+		    Roommate Post Status: Active
+	<% elsif roommate.roommate_active.eql? false %>
+		Roommate Post Status: Hidden
+	<% end %><br />           
+	<%= roommate.about %><br />
             <%= roommate.desired_living_area %></p>
-            </li>
+	</li>
             <br />
         </div>
         <div class="span4">

@@ -13,7 +13,7 @@ class RoomsController < ApplicationController
             @nearby_rooms = @nearby_rooms.uniq
             @rooms = Room.find_all_by_id(@nearby_rooms)
         else
-            @rooms = Room.all
+            @rooms = Room.find_all_by_room_active('t')
         end
 
         @rooms = @rooms.sort_by{|e| e.updated_at}.reverse

@@ -91,6 +91,15 @@
                     </div>
                 </div>
             </div>
+
+	    <div class="clearfix">
+		    <h2>Roommate Post Status</h2>
+		    <br />
+		    <div class="form-stacked">
+			    <%= f.label :roommate_active, "Roommate Post Status" %>                
+			    <%= f.select :roommate_active, {"Active" => true, "Hidden" => false}, {:class => "span2"} %>
+		    </div>
+	    </div>
         </div>
 
         <div class="actions">
