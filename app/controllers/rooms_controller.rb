@@ -3,6 +3,7 @@ class RoomsController < ApplicationController
     before_filter :require_room_belongs_to_current_user, :only => [:edit, :update, :destroy]
 
     def index
+            @rooms = Room.find_all_by_room_active('t')
         if params[:search].present?
             @locations = Location.near(params[:search], 10, :order => :distance)
             @nearby_rooms = Array.new
@@ -13,7 +14,7 @@ class RoomsController < ApplicationController
             @nearby_rooms = @nearby_rooms.uniq
             @rooms = Room.find_all_by_id(@nearby_rooms)
         else
-            @rooms = Room.find_all_by_room_active('t')
+		@rooms = @rooms
         end
 
         @rooms = @rooms.sort_by{|e| e.updated_at}.reverse

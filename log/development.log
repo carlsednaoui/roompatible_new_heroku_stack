@@ -20620,3 +20620,19 @@ Rendered roommates/_form.html.erb (81.4ms)
 Rendered roommates/new.html.erb within layouts/application (82.8ms)
   [1m[36mMessage Load (0.2ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE "messages"."last_read_timestamp" IS NULL AND "messages"."to_user_id" = 1[0m
 Completed 200 OK in 150ms (Views: 108.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 03 20:30:41 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Tue Jan 03 20:30:43 -0500 2012
+  Processing by RoomsController#index as HTML
+  [1m[35mRoom Load (0.2ms)[0m  SELECT "rooms".* FROM "rooms" WHERE "rooms"."room_active" = 't'
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1[0m
+Rendered rooms/index.html.erb within layouts/application (101.5ms)
+Completed 200 OK in 148ms (Views: 112.9ms | ActiveRecord: 2.5ms)
