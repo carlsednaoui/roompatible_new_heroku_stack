@@ -20636,3 +20636,972 @@ Started GET "/rooms" for 127.0.0.1 at Tue Jan 03 20:30:43 -0500 2012
   [1m[36mLocation Load (0.3ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1[0m
 Rendered rooms/index.html.erb within layouts/application (101.5ms)
 Completed 200 OK in 148ms (Views: 112.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jan 04 08:36:46 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 70ms (Views: 69.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Wed Jan 04 08:36:52 -0500 2012
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.6ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."room_active" = 't'[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.6ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+Rendered rooms/index.html.erb within layouts/application (82.6ms)
+Completed 200 OK in 238ms (Views: 154.2ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/roommates" for 127.0.0.1 at Wed Jan 04 08:36:55 -0500 2012
+  Processing by RoommatesController#index as HTML
+  [1m[36mRoommate Load (0.6ms)[0m  [1mSELECT "roommates".* FROM "roommates" WHERE "roommates"."roommate_active" = 't'[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered roommates/index.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 68ms (Views: 43.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/roommates/1" for 127.0.0.1 at Wed Jan 04 08:36:56 -0500 2012
+  Processing by RoommatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoommate Load (0.2ms)[0m  [1mSELECT "roommates".* FROM "roommates" WHERE "roommates"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered roommates/show.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 60ms (Views: 50.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Wed Jan 04 08:37:01 -0500 2012
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."room_active" = 't'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+Rendered rooms/index.html.erb within layouts/application (104.8ms)
+Completed 200 OK in 152ms (Views: 115.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at Wed Jan 04 08:37:02 -0500 2012
+  Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered /Library/Ruby/Gems/1.8/gems/gmaps4rails-1.3.2/app/views/gmaps4rails/_gmaps4rails.html.erb (2.2ms)
+  [1m[35mAsset Load (0.2ms)[0m  SELECT "assets".* FROM "assets" WHERE "assets"."room_id" = 1
+Rendered rooms/show.html.erb within layouts/application (108.7ms)
+Completed 200 OK in 173ms (Views: 124.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Jan 05 18:52:07 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 72ms (Views: 71.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Thu Jan 05 18:52:17 -0500 2012
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.8ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."room_active" = 't'[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.6ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.3ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+Rendered rooms/index.html.erb within layouts/application (82.2ms)
+Completed 200 OK in 233ms (Views: 155.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at Thu Jan 05 18:52:36 -0500 2012
+  Processing by DashboardController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at Thu Jan 05 18:52:36 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jan 07 15:18:51 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 78ms (Views: 77.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jan 07 15:19:42 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Sat Jan 07 15:20:12 -0500 2012
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.6ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."room_active" = 't'[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.5ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+Rendered rooms/index.html.erb within layouts/application (147.6ms)
+Completed 200 OK in 241ms (Views: 160.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at Sat Jan 07 15:20:16 -0500 2012
+
+
+Started GET "/auth/twitter/callback?oauth_token=EqUFNhzMvEL3MF1U8SpOP9Hr4CF2vqH7PeJuRjLAo4&oauth_verifier=mcOWSc4XVBAXipnvCesEDm1gpvuRJUOFkBjqU3NTWgM" for 127.0.0.1 at Sat Jan 07 15:20:23 -0500 2012
+  Processing by SessionsController#create as HTML
+  Parameters: {"oauth_verifier"=>"mcOWSc4XVBAXipnvCesEDm1gpvuRJUOFkBjqU3NTWgM", "oauth_token"=>"EqUFNhzMvEL3MF1U8SpOP9Hr4CF2vqH7PeJuRjLAo4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '292743631' AND "users"."provider" = 'twitter' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Jan 07 15:20:27 -0500 2012
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (9.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mQuizAttempt Load (0.5ms)[0m  [1mSELECT "quiz_attempts".* FROM "quiz_attempts" WHERE "quiz_attempts"."user_id" = 1 LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (0.4ms)
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages" WHERE "messages"."last_read_timestamp" IS NULL AND "messages"."to_user_id" = 1
+Completed 200 OK in 205ms (Views: 91.2ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Sat Jan 07 15:20:30 -0500 2012
+  Processing by RoomsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuizAttempt Load (0.2ms)[0m  SELECT "quiz_attempts".* FROM "quiz_attempts" WHERE "quiz_attempts"."user_id" = 1 LIMIT 1
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."room_active" = 't'[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+Rendered rooms/index.html.erb within layouts/application (87.5ms)
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE "messages"."last_read_timestamp" IS NULL AND "messages"."to_user_id" = 1[0m
+Completed 200 OK in 257ms (Views: 111.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at Sat Jan 07 15:20:31 -0500 2012
+  Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mQuizAttempt Load (0.2ms)[0m  [1mSELECT "quiz_attempts".* FROM "quiz_attempts" WHERE "quiz_attempts"."user_id" = 1 LIMIT 1[0m
+  [1m[35mRoom Load (0.3ms)[0m  SELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1[0m
+  [1m[35mQuizAttempt Load (0.2ms)[0m  SELECT "quiz_attempts".* FROM "quiz_attempts" WHERE "quiz_attempts"."user_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "quiz_attempts".* FROM "quiz_attempts" WHERE "quiz_attempts"."user_id" = 1[0m
+  [1m[35mQuizAttemptResponse Load (0.7ms)[0m  SELECT "quiz_attempt_responses".* FROM "quiz_attempt_responses" WHERE "quiz_attempt_responses"."quiz_attempt_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "quiz_attempt_responses".* FROM "quiz_attempt_responses" WHERE "quiz_attempt_responses"."quiz_attempt_id" = 1[0m
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 6 LIMIT 1
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 11 LIMIT 1[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 7 LIMIT 1
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 12 LIMIT 1[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 8 LIMIT 1
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 13 LIMIT 1[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 9 LIMIT 1
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 14 LIMIT 1[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 15 LIMIT 1
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 16 LIMIT 1[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 1 LIMIT 1
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 17 LIMIT 1[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 2 LIMIT 1
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 18 LIMIT 1[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 3 LIMIT 1
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 19 LIMIT 1[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 4 LIMIT 1
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 10 LIMIT 1[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "quiz_attempts".* FROM "quiz_attempts" WHERE "quiz_attempts"."user_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "quiz_attempts".* FROM "quiz_attempts" WHERE "quiz_attempts"."user_id" = 1 LIMIT 1
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = 1[0m
+  [1m[35mQuestionsTraits Load (0.5ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 1
+  [1m[36mQuestionsTraits Load (0.1ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 2[0m
+  [1m[35mQuestionsTraits Load (0.2ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 3
+  [1m[36mQuestionsTraits Load (0.2ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 4[0m
+  [1m[35mQuestionsTraits Load (0.1ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 5
+  [1m[36mQuestionsTraits Load (0.1ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 6[0m
+  [1m[35mQuestionsTraits Load (0.1ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 7
+  [1m[36mQuestionsTraits Load (0.1ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 8[0m
+  [1m[35mQuestionsTraits Load (0.2ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 9
+  [1m[36mQuestionsTraits Load (0.1ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 10[0m
+  [1m[35mQuestionsTraits Load (0.1ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 11
+  [1m[36mQuestionsTraits Load (0.1ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 12[0m
+  [1m[35mQuestionsTraits Load (0.2ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 13
+  [1m[36mQuestionsTraits Load (0.1ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 14[0m
+  [1m[35mQuestionsTraits Load (0.1ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 15
+  [1m[36mQuestionsTraits Load (0.1ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 16[0m
+  [1m[35mQuestionsTraits Load (0.1ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 17
+  [1m[36mQuestionsTraits Load (0.1ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 18[0m
+  [1m[35mQuestionsTraits Load (0.1ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 19
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "quiz_attempts".* FROM "quiz_attempts" WHERE "quiz_attempts"."user_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "quiz_attempts".* FROM "quiz_attempts" WHERE "quiz_attempts"."user_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "quiz_attempt_responses".* FROM "quiz_attempt_responses" WHERE "quiz_attempt_responses"."quiz_attempt_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "quiz_attempt_responses".* FROM "quiz_attempt_responses" WHERE "quiz_attempt_responses"."quiz_attempt_id" = 1
+  [1m[36mTrait Load (0.5ms)[0m  [1mSELECT "traits".* FROM "traits" WHERE "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 6 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 6 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 11 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 11 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 7 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 7 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 12 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 12 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 8 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 8 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 13 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 13 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 9 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 9 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 14 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 14 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 15 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 15 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 16 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 16 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 1 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 17 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 17 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 2 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 18 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 18 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 3 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 3 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 19 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 19 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 4 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 4 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 10 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 10 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 5 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 5 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 6 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 11 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 11 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 7 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 12 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 12 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 8 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 8 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 13 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 13 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 9 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 9 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 14 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 14 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 15 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 15 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 16 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 1 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 17 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 17 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 2 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 18 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 18 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 3 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 19 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 19 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 4 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 10 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 10 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 5 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 9 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 15 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 17 LIMIT 1[0m
+  [1m[35mTrait Load (0.2ms)[0m  SELECT "traits".* FROM "traits" WHERE "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 6 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 11 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 7 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 12 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 8 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 13 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 9 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 14 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 15 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 16 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 1 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 17 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 2 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 18 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 3 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 19 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 4 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 10 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 5 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 6 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 11 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 7 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 12 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 8 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 13 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 9 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 14 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 15 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 16 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 1 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 17 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 2 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 18 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 3 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 19 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 4 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 10 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 5 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 18 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 19 LIMIT 1[0m
+  [1m[35mTrait Load (0.2ms)[0m  SELECT "traits".* FROM "traits" WHERE "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 6 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 11 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 7 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 12 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 8 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 13 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 9 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 14 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 15 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 16 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 1 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 17 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 2 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 18 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 3 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 19 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 4 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 10 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 5 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 6 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 11 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 7 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 12 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 8 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 13 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 9 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 14 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 15 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 16 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 1 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 17 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 2 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 18 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 3 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 19 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 4 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 10 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 5 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 11 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 10 LIMIT 1[0m
+  [1m[35mTrait Load (0.2ms)[0m  SELECT "traits".* FROM "traits" WHERE "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 6 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 11 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 7 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 12 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 8 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 13 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 9 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 14 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 15 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 16 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 1 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 17 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 2 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 18 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 3 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 19 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 4 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 10 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 5 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 6 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 11 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 7 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 12 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 8 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 13 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 9 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 14 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 15 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 16 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 1 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 17 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 2 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 18 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 3 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 19 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 4 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 10 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 5 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 12 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 8 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 13 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 14 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 5 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered /Library/Ruby/Gems/1.8/gems/gmaps4rails-1.3.2/app/views/gmaps4rails/_gmaps4rails.html.erb (2.3ms)
+  [1m[36mAsset Load (0.2ms)[0m  [1mSELECT "assets".* FROM "assets" WHERE "assets"."room_id" = 1[0m
+Rendered rooms/show.html.erb within layouts/application (27.2ms)
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages" WHERE "messages"."last_read_timestamp" IS NULL AND "messages"."to_user_id" = 1
+Completed 200 OK in 839ms (Views: 54.7ms | ActiveRecord: 28.6ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at Sat Jan 07 15:21:23 -0500 2012
+  Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuizAttempt Load (0.2ms)[0m  SELECT "quiz_attempts".* FROM "quiz_attempts" WHERE "quiz_attempts"."user_id" = 1 LIMIT 1
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mLocation Load (0.3ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+  [1m[36mQuizAttempt Load (0.2ms)[0m  [1mSELECT "quiz_attempts".* FROM "quiz_attempts" WHERE "quiz_attempts"."user_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "quiz_attempts".* FROM "quiz_attempts" WHERE "quiz_attempts"."user_id" = 1
+  [1m[36mQuizAttemptResponse Load (0.2ms)[0m  [1mSELECT "quiz_attempt_responses".* FROM "quiz_attempt_responses" WHERE "quiz_attempt_responses"."quiz_attempt_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "quiz_attempt_responses".* FROM "quiz_attempt_responses" WHERE "quiz_attempt_responses"."quiz_attempt_id" = 1
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 6 LIMIT 1[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 11 LIMIT 1
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 7 LIMIT 1[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 12 LIMIT 1
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 8 LIMIT 1[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 13 LIMIT 1
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 9 LIMIT 1[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 14 LIMIT 1
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 15 LIMIT 1[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 16 LIMIT 1
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 1 LIMIT 1[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 17 LIMIT 1
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 2 LIMIT 1[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 18 LIMIT 1
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 3 LIMIT 1[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 19 LIMIT 1
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 4 LIMIT 1[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 10 LIMIT 1
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "quiz_attempts".* FROM "quiz_attempts" WHERE "quiz_attempts"."user_id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "quiz_attempts".* FROM "quiz_attempts" WHERE "quiz_attempts"."user_id" = 1 LIMIT 1[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = 1
+  [1m[36mQuestionsTraits Load (0.2ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 1[0m
+  [1m[35mQuestionsTraits Load (0.2ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 2
+  [1m[36mQuestionsTraits Load (0.1ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 3[0m
+  [1m[35mQuestionsTraits Load (0.1ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 4
+  [1m[36mQuestionsTraits Load (0.1ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 5[0m
+  [1m[35mQuestionsTraits Load (0.1ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 6
+  [1m[36mQuestionsTraits Load (0.1ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 7[0m
+  [1m[35mQuestionsTraits Load (0.1ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 8
+  [1m[36mQuestionsTraits Load (0.1ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 9[0m
+  [1m[35mQuestionsTraits Load (0.1ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 10
+  [1m[36mQuestionsTraits Load (0.1ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 11[0m
+  [1m[35mQuestionsTraits Load (0.1ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 12
+  [1m[36mQuestionsTraits Load (0.1ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 13[0m
+  [1m[35mQuestionsTraits Load (0.1ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 14
+  [1m[36mQuestionsTraits Load (0.1ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 15[0m
+  [1m[35mQuestionsTraits Load (0.1ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 16
+  [1m[36mQuestionsTraits Load (0.1ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 17[0m
+  [1m[35mQuestionsTraits Load (0.2ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 18
+  [1m[36mQuestionsTraits Load (0.2ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 19[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "quiz_attempts".* FROM "quiz_attempts" WHERE "quiz_attempts"."user_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "quiz_attempts".* FROM "quiz_attempts" WHERE "quiz_attempts"."user_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "quiz_attempt_responses".* FROM "quiz_attempt_responses" WHERE "quiz_attempt_responses"."quiz_attempt_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "quiz_attempt_responses".* FROM "quiz_attempt_responses" WHERE "quiz_attempt_responses"."quiz_attempt_id" = 1[0m
+  [1m[35mTrait Load (0.2ms)[0m  SELECT "traits".* FROM "traits" WHERE "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 6 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 6 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 11 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 11 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 7 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 7 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 12 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 12 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 8 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 8 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 13 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 13 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 9 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 9 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 14 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 14 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 15 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 15 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 16 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 16 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 1 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 17 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 17 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 2 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 18 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 18 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 3 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 19 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 19 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 4 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 10 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 10 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 5 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 5 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 6 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 11 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 11 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 7 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 12 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 12 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 8 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 13 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 13 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 9 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 14 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 14 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 15 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 15 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 16 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 1 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 17 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 17 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 2 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 18 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 18 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 3 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 19 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 19 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 4 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 10 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 5 AND "traits"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 15 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 17 LIMIT 1
+  [1m[36mTrait Load (0.2ms)[0m  [1mSELECT "traits".* FROM "traits" WHERE "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 6 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 11 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 7 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 12 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 8 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 13 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 9 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 14 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 15 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 16 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 1 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 17 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 2 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 18 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 3 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 19 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 4 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 10 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 5 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 6 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 11 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 7 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 12 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 8 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 13 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 9 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 14 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 15 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 16 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 1 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 17 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 2 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 18 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 3 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 19 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 4 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 10 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 5 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 18 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 19 LIMIT 1
+  [1m[36mTrait Load (0.2ms)[0m  [1mSELECT "traits".* FROM "traits" WHERE "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 6 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 11 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 7 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 12 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 8 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 13 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 9 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 14 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 15 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 16 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 1 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 17 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 2 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 18 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 3 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 19 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 4 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 10 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 5 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 6 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 11 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 7 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 12 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 8 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 13 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 9 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 14 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 15 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 16 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 1 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 17 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 2 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 18 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 3 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 19 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 4 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 10 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 5 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 11 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 10 LIMIT 1
+  [1m[36mTrait Load (0.2ms)[0m  [1mSELECT "traits".* FROM "traits" WHERE "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 6 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 11 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 7 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 12 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 8 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 13 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 9 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 14 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 15 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 16 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 1 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 17 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 2 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 18 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 3 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 19 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 4 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 10 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 5 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 6 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 11 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 7 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 12 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 8 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 13 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 9 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 14 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 15 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 16 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 1 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 17 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 2 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 18 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 3 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 19 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 4 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 10 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 5 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 12 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 13 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 14 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 5 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered /Library/Ruby/Gems/1.8/gems/gmaps4rails-1.3.2/app/views/gmaps4rails/_gmaps4rails.html.erb (0.6ms)
+  [1m[35mAsset Load (0.2ms)[0m  SELECT "assets".* FROM "assets" WHERE "assets"."room_id" = 1
+Rendered rooms/show.html.erb within layouts/application (23.2ms)
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE "messages"."last_read_timestamp" IS NULL AND "messages"."to_user_id" = 1[0m
+Completed 200 OK in 853ms (Views: 122.5ms | ActiveRecord: 26.0ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at Sat Jan 07 15:21:58 -0500 2012
+  Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mQuizAttempt Load (0.2ms)[0m  [1mSELECT "quiz_attempts".* FROM "quiz_attempts" WHERE "quiz_attempts"."user_id" = 1 LIMIT 1[0m
+  [1m[35mRoom Load (0.2ms)[0m  SELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1[0m
+  [1m[35mQuizAttempt Load (0.2ms)[0m  SELECT "quiz_attempts".* FROM "quiz_attempts" WHERE "quiz_attempts"."user_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "quiz_attempts".* FROM "quiz_attempts" WHERE "quiz_attempts"."user_id" = 1[0m
+  [1m[35mQuizAttemptResponse Load (0.2ms)[0m  SELECT "quiz_attempt_responses".* FROM "quiz_attempt_responses" WHERE "quiz_attempt_responses"."quiz_attempt_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "quiz_attempt_responses".* FROM "quiz_attempt_responses" WHERE "quiz_attempt_responses"."quiz_attempt_id" = 1[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 6 LIMIT 1
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 11 LIMIT 1[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 7 LIMIT 1
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 12 LIMIT 1[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 8 LIMIT 1
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 13 LIMIT 1[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 9 LIMIT 1
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 14 LIMIT 1[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 15 LIMIT 1
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 16 LIMIT 1[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 1 LIMIT 1
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 17 LIMIT 1[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 2 LIMIT 1
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 18 LIMIT 1[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 3 LIMIT 1
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 19 LIMIT 1[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 4 LIMIT 1
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 10 LIMIT 1[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "quiz_attempts".* FROM "quiz_attempts" WHERE "quiz_attempts"."user_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "quiz_attempts".* FROM "quiz_attempts" WHERE "quiz_attempts"."user_id" = 1 LIMIT 1
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = 1[0m
+  [1m[35mQuestionsTraits Load (0.2ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 1
+  [1m[36mQuestionsTraits Load (0.1ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 2[0m
+  [1m[35mQuestionsTraits Load (0.1ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 3
+  [1m[36mQuestionsTraits Load (0.1ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 4[0m
+  [1m[35mQuestionsTraits Load (0.1ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 5
+  [1m[36mQuestionsTraits Load (0.1ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 6[0m
+  [1m[35mQuestionsTraits Load (0.1ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 7
+  [1m[36mQuestionsTraits Load (0.1ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 8[0m
+  [1m[35mQuestionsTraits Load (0.1ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 9
+  [1m[36mQuestionsTraits Load (0.2ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 10[0m
+  [1m[35mQuestionsTraits Load (0.1ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 11
+  [1m[36mQuestionsTraits Load (0.1ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 12[0m
+  [1m[35mQuestionsTraits Load (0.1ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 13
+  [1m[36mQuestionsTraits Load (0.1ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 14[0m
+  [1m[35mQuestionsTraits Load (0.1ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 15
+  [1m[36mQuestionsTraits Load (0.1ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 16[0m
+  [1m[35mQuestionsTraits Load (0.1ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 17
+  [1m[36mQuestionsTraits Load (0.1ms)[0m  [1mSELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 18[0m
+  [1m[35mQuestionsTraits Load (0.1ms)[0m  SELECT "questions_traits".* FROM "questions_traits" WHERE "questions_traits"."question_id" = 19
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "quiz_attempts".* FROM "quiz_attempts" WHERE "quiz_attempts"."user_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "quiz_attempts".* FROM "quiz_attempts" WHERE "quiz_attempts"."user_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "quiz_attempt_responses".* FROM "quiz_attempt_responses" WHERE "quiz_attempt_responses"."quiz_attempt_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "quiz_attempt_responses".* FROM "quiz_attempt_responses" WHERE "quiz_attempt_responses"."quiz_attempt_id" = 1
+  [1m[36mTrait Load (0.2ms)[0m  [1mSELECT "traits".* FROM "traits" WHERE "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 6 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 6 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 11 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 11 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 7 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 7 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 12 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 12 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 8 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 8 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 13 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 13 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 9 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 9 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 14 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 14 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 15 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 15 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 16 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 16 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 1 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 17 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 17 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 2 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 18 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 18 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 3 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 3 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 19 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 19 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 4 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 4 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 10 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 10 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 5 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 5 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 6 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 11 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 11 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 7 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 12 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 12 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 8 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 8 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 13 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 13 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 9 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 9 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 14 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 14 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 15 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 15 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 16 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 1 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 17 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 17 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 2 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 18 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 18 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 3 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 19 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 19 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 4 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 10 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 10 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 5 AND "traits"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 9 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 15 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 17 LIMIT 1[0m
+  [1m[35mTrait Load (0.2ms)[0m  SELECT "traits".* FROM "traits" WHERE "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 6 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 11 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 7 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 12 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 8 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 13 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 9 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 14 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 15 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 16 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 1 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 17 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 2 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 18 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 3 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 19 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 4 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 10 AND "traits"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 5 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 6 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 11 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 7 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 12 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 8 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 13 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 9 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 14 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 15 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 16 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 1 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 17 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 2 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 18 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 3 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 19 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 4 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 10 AND "traits"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 5 AND "traits"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 18 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 19 LIMIT 1[0m
+  [1m[35mTrait Load (0.2ms)[0m  SELECT "traits".* FROM "traits" WHERE "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 6 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 11 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 7 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 12 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 8 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 13 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 9 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 14 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 15 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 16 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 1 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 17 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 2 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 18 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 3 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 19 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 4 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 10 AND "traits"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 5 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 6 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 11 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 7 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 12 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 8 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 13 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 9 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 14 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 15 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 16 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 1 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 17 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 2 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 18 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 3 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 19 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 4 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 10 AND "traits"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 5 AND "traits"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 11 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 10 LIMIT 1[0m
+  [1m[35mTrait Load (0.2ms)[0m  SELECT "traits".* FROM "traits" WHERE "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 6 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 11 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 7 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 12 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 8 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 13 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 9 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 14 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 15 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 16 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 1 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 17 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 2 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 18 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 3 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 19 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 4 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 10 AND "traits"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 5 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 6 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 11 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 7 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 12 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 8 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 13 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 9 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 14 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 15 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 16 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 1 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 17 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 2 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 18 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 3 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 19 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 4 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 10 AND "traits"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "traits" INNER JOIN "questions_traits" ON "traits"."id" = "questions_traits"."trait_id" WHERE "questions_traits"."question_id" = 5 AND "traits"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 12 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 8 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 13 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 14 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = 5 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered /Library/Ruby/Gems/1.8/gems/gmaps4rails-1.3.2/app/views/gmaps4rails/_gmaps4rails.html.erb (0.4ms)
+  [1m[36mAsset Load (0.2ms)[0m  [1mSELECT "assets".* FROM "assets" WHERE "assets"."room_id" = 1[0m
+Rendered rooms/show.html.erb within layouts/application (22.6ms)
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages" WHERE "messages"."last_read_timestamp" IS NULL AND "messages"."to_user_id" = 1
+Completed 200 OK in 792ms (Views: 44.9ms | ActiveRecord: 26.9ms)
