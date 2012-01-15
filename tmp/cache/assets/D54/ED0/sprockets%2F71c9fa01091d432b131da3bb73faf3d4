@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@value{	"_version"%2d633acd2c733fe168cd893356dca3a0"digest"%fb8e31b6898337133e588e44785f171e"lengthiÂâ"source"Ââ/*
+o: ActiveSupport::Cache::Entry	:@value{	"_version"%9ffac8ba24d7ee25bbc4edb79ba643f6"digest"%a2ec8800e735eff439b0e96c6a364d42"lengthiÀâ"source"Àâ/*
 */
 
 /*!
@@ -2396,7 +2396,7 @@ Main CSS
 
 body {
 	background-color: #e4eff7;
-	background-image: url('../assets/bcg-pattern.png');
+	background-image: url('/assets/bcg-pattern.png');
 	font-family: arial, helvetica, sans-serif;
 }
 
@@ -2637,4 +2637,4 @@ Room Listing
 	font-size: 2em;
 	margin-bottom: 0em;
 }
-:@expires_in0:@compressedF:@created_atf1326654914.0063889 h­
+:@expires_in0:@compressedF:@created_atf1326656562.1234169 æ

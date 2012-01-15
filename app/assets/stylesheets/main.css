@@ -4,7 +4,7 @@ Main CSS
 
 body {
 	background-color: #e4eff7;
-	background-image: url('../assets/bcg-pattern.png');
+	background-image: url('/assets/bcg-pattern.png');
 	font-family: arial, helvetica, sans-serif;
 }
 
