@@ -22876,3 +22876,15 @@ Started GET "/sign-up" for 127.0.0.1 at Sun Jan 15 15:02:29 -0500 2012
   Processing by HomeController#sign_up as HTML
 Rendered home/sign_up.html.erb within layouts/application (0.6ms)
 Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 15:04:12 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 15:05:20 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.0ms)
