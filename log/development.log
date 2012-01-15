@@ -22969,3 +22969,15 @@ Started GET "/" for 127.0.0.1 at Sun Jan 15 15:18:16 -0500 2012
   Processing by HomeController#index as HTML
 Rendered home/index.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 109ms (Views: 108.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 15:19:55 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 15:21:45 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.0ms)
