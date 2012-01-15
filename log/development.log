@@ -21882,3 +21882,884 @@ Rendered /Library/Ruby/Gems/1.8/gems/gmaps4rails-1.3.2/app/views/gmaps4rails/_gm
 Rendered rooms/show.html.erb within layouts/application (19.4ms)
   [1m[36mMessage Load (0.2ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE "messages"."last_read_timestamp" IS NULL AND "messages"."to_user_id" = 1[0m
 Completed 200 OK in 841ms (Views: 118.3ms | ActiveRecord: 25.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:28:17 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 84ms (Views: 83.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:28:21 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:28:35 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 49ms (Views: 48.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:28:36 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:28:50 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 35ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:28:51 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:29:25 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 99ms (Views: 98.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:29:27 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:29:44 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:29:50 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 36ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:29:51 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:31:57 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 35ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:32:03 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:32:06 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:35:15 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 101ms (Views: 100.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:35:24 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 100ms (Views: 99.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:35:34 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 105ms (Views: 104.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:35:41 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 101ms (Views: 100.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/bcg-pattern.png" for 127.0.0.1 at Sun Jan 15 13:35:41 -0500 2012
+
+ActionController::RoutingError (No route matches [GET] "/images/bcg-pattern.png"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:35:56 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 104ms (Views: 103.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/gradient.png" for 127.0.0.1 at Sun Jan 15 13:35:57 -0500 2012
+
+ActionController::RoutingError (No route matches [GET] "/images/gradient.png"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:36:24 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 100ms (Views: 99.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/carl.png" for 127.0.0.1 at Sun Jan 15 13:36:24 -0500 2012
+
+ActionController::RoutingError (No route matches [GET] "/images/carl.png"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:36:36 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 102ms (Views: 101.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/carl.png" for 127.0.0.1 at Sun Jan 15 13:36:36 -0500 2012
+
+ActionController::RoutingError (No route matches [GET] "/carl.png"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:36:37 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 80ms (Views: 79.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/carl.png" for 127.0.0.1 at Sun Jan 15 13:36:37 -0500 2012
+
+ActionController::RoutingError (No route matches [GET] "/carl.png"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:37:24 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 33ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:37:25 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:37:32 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:37:43 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 36ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:37:48 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:37:55 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:38:02 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:38:14 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:38:27 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:40:45 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:43:02 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:43:03 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Sun Jan 15 13:43:09 -0500 2012
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.7ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."room_active" = 't'[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.6ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+Rendered rooms/index.html.erb within layouts/application (138.5ms)
+Completed 200 OK in 225ms (Views: 149.7ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at Sun Jan 15 13:43:16 -0500 2012
+  Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered /Library/Ruby/Gems/1.8/gems/gmaps4rails-1.3.2/app/views/gmaps4rails/_gmaps4rails.html.erb (2.2ms)
+  [1m[35mAsset Load (0.2ms)[0m  SELECT "assets".* FROM "assets" WHERE "assets"."room_id" = 1
+Rendered rooms/show.html.erb within layouts/application (120.8ms)
+Completed 200 OK in 182ms (Views: 134.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:44:14 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/how-it-works" for 127.0.0.1 at Sun Jan 15 13:44:20 -0500 2012
+  Processing by HomeController#how_it_works as HTML
+Rendered home/how_it_works.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Sun Jan 15 13:44:27 -0500 2012
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."room_active" = 't'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+Rendered rooms/index.html.erb within layouts/application (44.8ms)
+Completed 200 OK in 156ms (Views: 55.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:44:31 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:44:54 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 33ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Sun Jan 15 13:44:59 -0500 2012
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."room_active" = 't'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+Rendered rooms/index.html.erb within layouts/application (98.9ms)
+Completed 200 OK in 142ms (Views: 109.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at Sun Jan 15 13:45:01 -0500 2012
+  Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered /Library/Ruby/Gems/1.8/gems/gmaps4rails-1.3.2/app/views/gmaps4rails/_gmaps4rails.html.erb (0.4ms)
+  [1m[35mAsset Load (0.2ms)[0m  SELECT "assets".* FROM "assets" WHERE "assets"."room_id" = 1
+Rendered rooms/show.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 219ms (Views: 102.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/how-it-works" for 127.0.0.1 at Sun Jan 15 13:45:10 -0500 2012
+  Processing by HomeController#how_it_works as HTML
+Rendered home/how_it_works.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/roommates" for 127.0.0.1 at Sun Jan 15 13:45:12 -0500 2012
+  Processing by RoommatesController#index as HTML
+  [1m[36mRoommate Load (0.6ms)[0m  [1mSELECT "roommates".* FROM "roommates" WHERE "roommates"."roommate_active" = 't'[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered roommates/index.html.erb within layouts/application (87.9ms)
+Completed 200 OK in 123ms (Views: 100.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/roommates/1" for 127.0.0.1 at Sun Jan 15 13:45:15 -0500 2012
+  Processing by RoommatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoommate Load (0.2ms)[0m  [1mSELECT "roommates".* FROM "roommates" WHERE "roommates"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered roommates/show.html.erb within layouts/application (99.7ms)
+Completed 200 OK in 121ms (Views: 112.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/roommates/1" for 127.0.0.1 at Sun Jan 15 13:45:39 -0500 2012
+  Processing by RoommatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoommate Load (0.2ms)[0m  [1mSELECT "roommates".* FROM "roommates" WHERE "roommates"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered roommates/show.html.erb within layouts/application (31.4ms)
+Completed 200 OK in 73ms (Views: 64.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:45:49 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:47:08 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:49:11 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:49:58 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 86ms (Views: 86.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:51:26 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 13:56:46 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 14:02:17 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 14:03:05 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 81ms (Views: 80.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Sun Jan 15 14:03:10 -0500 2012
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."room_active" = 't'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+Rendered rooms/index.html.erb within layouts/application (47.2ms)
+Completed 200 OK in 161ms (Views: 58.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at Sun Jan 15 14:03:12 -0500 2012
+  Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered /Library/Ruby/Gems/1.8/gems/gmaps4rails-1.3.2/app/views/gmaps4rails/_gmaps4rails.html.erb (0.4ms)
+  [1m[35mAsset Load (0.2ms)[0m  SELECT "assets".* FROM "assets" WHERE "assets"."room_id" = 1
+Rendered rooms/show.html.erb within layouts/application (97.2ms)
+Completed 200 OK in 159ms (Views: 110.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/roommates" for 127.0.0.1 at Sun Jan 15 14:03:15 -0500 2012
+  Processing by RoommatesController#index as HTML
+  [1m[36mRoommate Load (0.1ms)[0m  [1mSELECT "roommates".* FROM "roommates" WHERE "roommates"."roommate_active" = 't'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered roommates/index.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 56ms (Views: 36.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Sun Jan 15 14:03:17 -0500 2012
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."room_active" = 't'[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+Rendered rooms/index.html.erb within layouts/application (114.9ms)
+Completed 200 OK in 161ms (Views: 126.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 14:03:19 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/roommates" for 127.0.0.1 at Sun Jan 15 14:03:35 -0500 2012
+  Processing by RoommatesController#index as HTML
+  [1m[36mRoommate Load (0.2ms)[0m  [1mSELECT "roommates".* FROM "roommates" WHERE "roommates"."roommate_active" = 't'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered roommates/index.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 156ms (Views: 43.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Sun Jan 15 14:03:57 -0500 2012
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."room_active" = 't'[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+Rendered rooms/index.html.erb within layouts/application (104.6ms)
+Completed 200 OK in 149ms (Views: 115.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at Sun Jan 15 14:04:00 -0500 2012
+  Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered /Library/Ruby/Gems/1.8/gems/gmaps4rails-1.3.2/app/views/gmaps4rails/_gmaps4rails.html.erb (0.4ms)
+  [1m[35mAsset Load (0.2ms)[0m  SELECT "assets".* FROM "assets" WHERE "assets"."room_id" = 1
+Rendered rooms/show.html.erb within layouts/application (90.5ms)
+Completed 200 OK in 219ms (Views: 102.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 14:04:06 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/roommates" for 127.0.0.1 at Sun Jan 15 14:04:11 -0500 2012
+  Processing by RoommatesController#index as HTML
+  [1m[36mRoommate Load (0.2ms)[0m  [1mSELECT "roommates".* FROM "roommates" WHERE "roommates"."roommate_active" = 't'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered roommates/index.html.erb within layouts/application (87.2ms)
+Completed 200 OK in 117ms (Views: 98.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/roommates" for 127.0.0.1 at Sun Jan 15 14:04:16 -0500 2012
+  Processing by RoommatesController#index as HTML
+  [1m[36mRoommate Load (0.1ms)[0m  [1mSELECT "roommates".* FROM "roommates" WHERE "roommates"."roommate_active" = 't'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered roommates/index.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 122ms (Views: 103.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Sun Jan 15 14:04:18 -0500 2012
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."room_active" = 't'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.3ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+Rendered rooms/index.html.erb within layouts/application (102.4ms)
+Completed 200 OK in 147ms (Views: 113.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 14:05:05 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 115ms (Views: 115.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 14:05:06 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 14:05:07 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/roommates" for 127.0.0.1 at Sun Jan 15 14:05:10 -0500 2012
+  Processing by RoommatesController#index as HTML
+  [1m[36mRoommate Load (0.2ms)[0m  [1mSELECT "roommates".* FROM "roommates" WHERE "roommates"."roommate_active" = 't'[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered roommates/index.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 59ms (Views: 38.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Sun Jan 15 14:05:11 -0500 2012
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."room_active" = 't'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+Rendered rooms/index.html.erb within layouts/application (112.2ms)
+Completed 200 OK in 158ms (Views: 123.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Sun Jan 15 14:05:27 -0500 2012
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."room_active" = 't'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+Rendered rooms/index.html.erb within layouts/application (105.7ms)
+Completed 200 OK in 166ms (Views: 135.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Sun Jan 15 14:05:29 -0500 2012
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."room_active" = 't'[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+Rendered rooms/index.html.erb within layouts/application (112.6ms)
+Completed 200 OK in 157ms (Views: 123.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/roommates" for 127.0.0.1 at Sun Jan 15 14:05:31 -0500 2012
+  Processing by RoommatesController#index as HTML
+  [1m[36mRoommate Load (0.2ms)[0m  [1mSELECT "roommates".* FROM "roommates" WHERE "roommates"."roommate_active" = 't'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered roommates/index.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 127ms (Views: 38.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 14:05:33 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 14:08:33 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 90ms (Views: 89.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 14:08:37 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Sun Jan 15 14:08:38 -0500 2012
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."room_active" = 't'[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+Rendered rooms/index.html.erb within layouts/application (108.1ms)
+Completed 200 OK in 150ms (Views: 119.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/roommates" for 127.0.0.1 at Sun Jan 15 14:08:40 -0500 2012
+  Processing by RoommatesController#index as HTML
+  [1m[36mRoommate Load (0.1ms)[0m  [1mSELECT "roommates".* FROM "roommates" WHERE "roommates"."roommate_active" = 't'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered roommates/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 57ms (Views: 36.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/roommates/1" for 127.0.0.1 at Sun Jan 15 14:08:47 -0500 2012
+  Processing by RoommatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoommate Load (0.2ms)[0m  [1mSELECT "roommates".* FROM "roommates" WHERE "roommates"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered roommates/show.html.erb within layouts/application (93.0ms)
+Completed 200 OK in 112ms (Views: 104.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 14:08:53 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Sun Jan 15 14:08:56 -0500 2012
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."room_active" = 't'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+Rendered rooms/index.html.erb within layouts/application (107.2ms)
+Completed 200 OK in 152ms (Views: 118.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at Sun Jan 15 14:08:59 -0500 2012
+  Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered /Library/Ruby/Gems/1.8/gems/gmaps4rails-1.3.2/app/views/gmaps4rails/_gmaps4rails.html.erb (0.4ms)
+  [1m[35mAsset Load (0.2ms)[0m  SELECT "assets".* FROM "assets" WHERE "assets"."room_id" = 1
+Rendered rooms/show.html.erb within layouts/application (92.4ms)
+Completed 200 OK in 152ms (Views: 104.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 14:09:04 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 14:09:19 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 118ms (Views: 117.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Sun Jan 15 14:09:23 -0500 2012
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."room_active" = 't'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+Rendered rooms/index.html.erb within layouts/application (44.1ms)
+Completed 200 OK in 157ms (Views: 54.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at Sun Jan 15 14:09:25 -0500 2012
+  Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered /Library/Ruby/Gems/1.8/gems/gmaps4rails-1.3.2/app/views/gmaps4rails/_gmaps4rails.html.erb (0.4ms)
+  [1m[35mAsset Load (0.2ms)[0m  SELECT "assets".* FROM "assets" WHERE "assets"."room_id" = 1
+Rendered rooms/show.html.erb within layouts/application (98.6ms)
+Completed 200 OK in 158ms (Views: 109.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at Sun Jan 15 14:10:20 -0500 2012
+  Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered /Library/Ruby/Gems/1.8/gems/gmaps4rails-1.3.2/app/views/gmaps4rails/_gmaps4rails.html.erb (0.5ms)
+  [1m[35mAsset Load (0.2ms)[0m  SELECT "assets".* FROM "assets" WHERE "assets"."room_id" = 1
+Rendered rooms/show.html.erb within layouts/application (95.2ms)
+Completed 200 OK in 155ms (Views: 106.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/roommates" for 127.0.0.1 at Sun Jan 15 14:10:22 -0500 2012
+  Processing by RoommatesController#index as HTML
+  [1m[36mRoommate Load (0.2ms)[0m  [1mSELECT "roommates".* FROM "roommates" WHERE "roommates"."roommate_active" = 't'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered roommates/index.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 58ms (Views: 37.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Sun Jan 15 14:10:23 -0500 2012
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."room_active" = 't'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+Rendered rooms/index.html.erb within layouts/application (112.0ms)
+Completed 200 OK in 157ms (Views: 122.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 14:10:25 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 14:11:26 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 117ms (Views: 116.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 14:12:01 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 107ms (Views: 106.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Sun Jan 15 14:12:11 -0500 2012
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."room_active" = 't'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+Rendered rooms/index.html.erb within layouts/application (48.2ms)
+Completed 200 OK in 162ms (Views: 59.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at Sun Jan 15 14:12:14 -0500 2012
+  Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered /Library/Ruby/Gems/1.8/gems/gmaps4rails-1.3.2/app/views/gmaps4rails/_gmaps4rails.html.erb (0.4ms)
+  [1m[35mAsset Load (0.2ms)[0m  SELECT "assets".* FROM "assets" WHERE "assets"."room_id" = 1
+Rendered rooms/show.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 167ms (Views: 44.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at Sun Jan 15 14:13:21 -0500 2012
+  Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mLocation Load (0.3ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered /Library/Ruby/Gems/1.8/gems/gmaps4rails-1.3.2/app/views/gmaps4rails/_gmaps4rails.html.erb (2.1ms)
+  [1m[35mAsset Load (0.2ms)[0m  SELECT "assets".* FROM "assets" WHERE "assets"."room_id" = 1
+Rendered rooms/show.html.erb within layouts/application (125.3ms)
+Completed 200 OK in 268ms (Views: 170.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at Sun Jan 15 14:13:57 -0500 2012
+  Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered /Library/Ruby/Gems/1.8/gems/gmaps4rails-1.3.2/app/views/gmaps4rails/_gmaps4rails.html.erb (0.5ms)
+  [1m[35mAsset Load (0.2ms)[0m  SELECT "assets".* FROM "assets" WHERE "assets"."room_id" = 1
+Rendered rooms/show.html.erb within layouts/application (44.6ms)
+Completed 200 OK in 179ms (Views: 56.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/roommates" for 127.0.0.1 at Sun Jan 15 14:14:36 -0500 2012
+  Processing by RoommatesController#index as HTML
+  [1m[36mRoommate Load (0.2ms)[0m  [1mSELECT "roommates".* FROM "roommates" WHERE "roommates"."roommate_active" = 't'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered roommates/index.html.erb within layouts/application (96.6ms)
+Completed 200 OK in 128ms (Views: 108.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/roommates/1" for 127.0.0.1 at Sun Jan 15 14:14:38 -0500 2012
+  Processing by RoommatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoommate Load (0.2ms)[0m  [1mSELECT "roommates".* FROM "roommates" WHERE "roommates"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered roommates/show.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 55ms (Views: 46.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/roommates/1" for 127.0.0.1 at Sun Jan 15 14:15:13 -0500 2012
+  Processing by RoommatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoommate Load (0.2ms)[0m  [1mSELECT "roommates".* FROM "roommates" WHERE "roommates"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered roommates/show.html.erb within layouts/application (99.6ms)
+Completed 200 OK in 137ms (Views: 129.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 14:15:28 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Sun Jan 15 14:15:36 -0500 2012
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."room_active" = 't'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+Rendered rooms/index.html.erb within layouts/application (52.4ms)
+Completed 200 OK in 175ms (Views: 63.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/rooms/1" for 127.0.0.1 at Sun Jan 15 14:15:38 -0500 2012
+  Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered /Library/Ruby/Gems/1.8/gems/gmaps4rails-1.3.2/app/views/gmaps4rails/_gmaps4rails.html.erb (0.4ms)
+  [1m[35mAsset Load (0.2ms)[0m  SELECT "assets".* FROM "assets" WHERE "assets"."room_id" = 1
+Rendered rooms/show.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 169ms (Views: 43.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 14:15:44 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 14:34:28 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 14:34:52 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 82ms (Views: 81.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Sun Jan 15 14:35:08 -0500 2012
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."room_active" = 't'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+Rendered rooms/index.html.erb within layouts/application (45.4ms)
+Completed 200 OK in 159ms (Views: 57.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 14:35:36 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 14:36:29 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 14:37:00 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 14:38:58 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
