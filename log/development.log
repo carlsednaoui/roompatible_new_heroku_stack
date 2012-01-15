@@ -22888,3 +22888,19 @@ Started GET "/" for 127.0.0.1 at Sun Jan 15 15:05:20 -0500 2012
   Processing by HomeController#index as HTML
 Rendered home/index.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jan 15 15:07:21 -0500 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Sun Jan 15 15:07:22 -0500 2012
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT "rooms".* FROM "rooms" WHERE "rooms"."room_active" = 't'[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."room_id" = 1
+Rendered rooms/index.html.erb within layouts/application (111.5ms)
+Completed 200 OK in 156ms (Views: 122.0ms | ActiveRecord: 2.7ms)
