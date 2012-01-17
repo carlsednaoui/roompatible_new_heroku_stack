@@ -25160,3 +25160,101 @@ ActionController::RoutingError (No route matches [GET] "/q3wfq"):
   
 
 Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Jan 16 22:40:14 -0500 2012
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mQuizAttempt Load (0.2ms)[0m  [1mSELECT "quiz_attempts".* FROM "quiz_attempts" WHERE "quiz_attempts"."user_id" = 2 LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages" WHERE "messages"."last_read_timestamp" IS NULL AND "messages"."to_user_id" = 2
+Completed 200 OK in 108ms (Views: 71.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/saff" for 127.0.0.1 at Mon Jan 16 22:40:16 -0500 2012
+
+ActionController::RoutingError (No route matches [GET] "/saff"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Jan 16 22:43:11 -0500 2012
+
+ActionController::RoutingError (undefined method `consider_all_requests_local' for ActionController::Base:Class):
+  app/controllers/application_controller.rb:5
+  app/controllers/home_controller.rb:1
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Jan 16 22:44:41 -0500 2012
+
+ActionController::RoutingError (undefined method `consider_all_requests_local' for ActionController::Base:Class):
+  app/controllers/application_controller.rb:5
+  app/controllers/home_controller.rb:1
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Jan 16 22:45:44 -0500 2012
+
+ActionController::RoutingError (undefined method `consider_all_requests_local' for ActionController::Base:Class):
+  app/controllers/application_controller.rb:5
+  app/controllers/home_controller.rb:1
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Jan 16 22:46:03 -0500 2012
+
+ActionController::RoutingError (undefined method `consider_all_requests_local' for ActionController::Base:Class):
+  app/controllers/application_controller.rb:5
+  app/controllers/home_controller.rb:1
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Jan 16 22:46:04 -0500 2012
+
+ActionController::RoutingError (undefined method `consider_all_requests_local' for ActionController::Base:Class):
+  app/controllers/application_controller.rb:5
+  app/controllers/home_controller.rb:1
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Jan 16 22:46:04 -0500 2012
+
+ActionController::RoutingError (undefined method `consider_all_requests_local' for ActionController::Base:Class):
+  app/controllers/application_controller.rb:5
+  app/controllers/home_controller.rb:1
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Jan 16 22:46:13 -0500 2012
+
+ActionController::RoutingError (undefined method `consider_all_requests_local' for ActionController::Base:Class):
+  app/controllers/application_controller.rb:5
+  app/controllers/home_controller.rb:1
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Jan 16 22:46:14 -0500 2012
+
+ActionController::RoutingError (undefined method `consider_all_requests_local' for ActionController::Base:Class):
+  app/controllers/application_controller.rb:5
+  app/controllers/home_controller.rb:1
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Jan 16 22:46:14 -0500 2012
+
+ActionController::RoutingError (undefined method `consider_all_requests_local' for ActionController::Base:Class):
+  app/controllers/application_controller.rb:5
+  app/controllers/home_controller.rb:1
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
