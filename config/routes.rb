@@ -1,9 +1,5 @@
 Roompatible::Application.routes.draw do
 
-	unless Rails.application.config.consider_all_requests_local
-		match "*not_found" => "errors#error_404"
-	end
-
     get "messages/show"
 
     resources :roommates
