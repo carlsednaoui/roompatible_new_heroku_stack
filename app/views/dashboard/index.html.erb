@@ -25,7 +25,7 @@
                 <% end %>
                 <%= message.created_at.time.to_date %>
                 <br />
-                <% link_to(message) do %>
+                <%= link_to(message) do %>
                     <%= message.body %>
                 <% end %><br />
                 </li>
