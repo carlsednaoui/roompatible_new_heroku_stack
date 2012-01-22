@@ -5,7 +5,8 @@ Main CSS
 body {
 	background-color: #e4eff7;
 	background-image: url('../assets/bcg-pattern.png');
-	font-family: arial, helvetica, sans-serif;
+	font-family: 'Lusitana', serif;
+	font-size: 17px;
 }
 
 .main {
@@ -33,7 +34,7 @@ footer p {
 h1 {
 	font-size: 2em;
 	color: #393e46;
-	font-family: arial, helvetica, sans-serif;
+	font-family: 'Quattrocento', serif;
 }
 
 h1 small {
@@ -50,7 +51,7 @@ h2 small {
 }
 
 p {
-	font-family: arial, helvetica, sans-serif;
+	font-family: 'Lusitana', serif;
 	color: #5c676c;
 	font-size: 1.1em;
 	line-height: 1.4em;
@@ -61,14 +62,14 @@ li {
 }
 
 form {
-	font-family: arial, helvetica, sans-serif;
+	font-family: 'Lusitana', serif;
 	color: #5c676c;
 	font-size: 1.2em;
-	line-height: 1.2em;
+	line-height: 1.3em;
 }
 
 label {
-	font-family: arial, helvetica, sans-serif;
+	font-family: 'Lusitana', serif;
 	color: #5c676c;
 	font-size: .8em;
 }
@@ -227,6 +228,8 @@ Room Listing
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	line-height: 1.2em;
+	padding-top: 5px;
 }
 
 .room-amenities {

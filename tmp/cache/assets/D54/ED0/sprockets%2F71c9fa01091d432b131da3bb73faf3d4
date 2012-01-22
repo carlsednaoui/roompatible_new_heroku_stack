@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@value{	"_version"%f8f8ba12122b1ade3523499a1ba8e495"digest"%fb8e31b6898337133e588e44785f171e"lengthiÂâ"source"Ââ/*
+o: ActiveSupport::Cache::Entry	:@value{	"_version"%9aa34e41b1733949258b61f3e08d2892"digest"%42e8ca329bf5930da88f0b803ba953c2"lengthiÉâ"source"Éâ/*
 */
 
 /*!
@@ -2397,7 +2397,8 @@ Main CSS
 body {
 	background-color: #e4eff7;
 	background-image: url('../assets/bcg-pattern.png');
-	font-family: arial, helvetica, sans-serif;
+	font-family: 'Lusitana', serif;
+	font-size: 17px;
 }
 
 .main {
@@ -2425,7 +2426,7 @@ footer p {
 h1 {
 	font-size: 2em;
 	color: #393e46;
-	font-family: arial, helvetica, sans-serif;
+	font-family: 'Quattrocento', serif;
 }
 
 h1 small {
@@ -2442,7 +2443,7 @@ h2 small {
 }
 
 p {
-	font-family: arial, helvetica, sans-serif;
+	font-family: 'Lusitana', serif;
 	color: #5c676c;
 	font-size: 1.1em;
 	line-height: 1.4em;
@@ -2453,14 +2454,14 @@ li {
 }
 
 form {
-	font-family: arial, helvetica, sans-serif;
+	font-family: 'Lusitana', serif;
 	color: #5c676c;
 	font-size: 1.2em;
-	line-height: 1.2em;
+	line-height: 1.3em;
 }
 
 label {
-	font-family: arial, helvetica, sans-serif;
+	font-family: 'Lusitana', serif;
 	color: #5c676c;
 	font-size: .8em;
 }
@@ -2619,6 +2620,8 @@ Room Listing
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	line-height: 1.2em;
+	padding-top: 5px;
 }
 
 .room-amenities {
@@ -2637,4 +2640,4 @@ Room Listing
 	font-size: 2em;
 	margin-bottom: 0em;
 }
-:@expires_in0:@compressedF:@created_atf1326770987.7969151  ¨
+:@expires_in0:@compressedF:@created_atf1327253975.4971261 Ðê
