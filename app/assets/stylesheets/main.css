@@ -3,17 +3,17 @@ Main CSS
 ***********************/
 
 @font-face {
-  font-family: "Lusitana";
-  src: url(/assets/lusitana.eot);
-  font-weight: 900;
-  font-style: normal;
+ 	font-family: "Lusitana";
+	src: url('<%= asset_path('lusitana.eot') %>');
+ 	font-weight: 900;
+ 	font-style: normal;
 }
 
 @font-face {
-  font-family: "Quattrocento";
-  src: url(/assets/quattrocento.eot);
-  font-weight: 900;
-  font-style: normal;
+  	font-family: "Quattrocento";
+	src: url('<%= asset_path('quattrocento.eot') %>');
+  	font-weight: 900;
+  	font-style: normal;
 }
 
 body {
