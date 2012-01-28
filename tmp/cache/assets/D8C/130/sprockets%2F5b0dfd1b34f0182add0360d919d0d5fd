@@ -9267,5 +9267,5 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 })( window );
 "content_type"application/javascript"
 class"BundledAsset"
-mtime"2011-12-25T14:38:25-05:00"_version"%46dde6621c301f4928e3b34efee9e3b5"id"%8a0f4daca433cc7074c6f8c8c755c67d"dependency_paths[{"hexdigest"%683679b346b30943f8589b640966202a"
-mtimeu:	Time3ÔÄ  êô"	path"X/Library/Ruby/Gems/1.8/gems/jquery-rails-1.0.19/vendor/assets/javascripts/jquery.js"pathname"X/Library/Ruby/Gems/1.8/gems/jquery-rails-1.0.19/vendor/assets/javascripts/jquery.js"logical_path"jquery.js:@expires_in0:@compressedF:@created_atf1326767046.08041 %p
+mtime"2011-12-25T14:38:25-05:00"_version"%1c9609bc58b1e77c196de29021583379"id"%554456a646fafec787ad3983b9b2bf59"dependency_paths[{"hexdigest"%221a7ddb7906c7367927d2fd81a48a55"
+mtimeu:	Time3ÔÄ  êô"	path"X/Library/Ruby/Gems/1.8/gems/jquery-rails-1.0.19/vendor/assets/javascripts/jquery.js"pathname"X/Library/Ruby/Gems/1.8/gems/jquery-rails-1.0.19/vendor/assets/javascripts/jquery.js"logical_path"jquery.js:@expires_in0:@compressedF:@created_atf1327771971.3630669 <}
