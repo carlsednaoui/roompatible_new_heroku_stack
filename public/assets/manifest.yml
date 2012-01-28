@@ -15,7 +15,6 @@ message.png: message-cbb218ff2c65c1ac154fb96963bc2233.png
 clock.png: clock-98f4b74475e5e1b87ed89d0a5cce29a5.png
 camera.png: camera-2ce2df06abacfa47bf615c4f71543598.png
 button_true.png: button_true-b23cf06c70f4339cdf932ddb7d8d3476.png
-bcg-pattern-main.png: bcg-pattern-main-1ffafd48bf0485f0e5120b5e23a47442.png
 roompatible-logo.png: roompatible-logo-cbc372c18141d9ca01fc6a51a156706c.png
 gmaps4rails/gmaps4rails.openlayers.js: gmaps4rails/gmaps4rails.openlayers-2ff00c6b0946f1ce9c92ac99e1c73bc5.js
 map_example.png: map_example-6fba655cdfb90aa4e1092969bdf96e4a.png
@@ -25,7 +24,7 @@ f-logo.png: f-logo-cee5f24f8b03c42fc81e033fe288ad0f.png
 jquery-ui.min.js: jquery-ui.min-0424e108178defa1cc794ee24fc92d24.js
 crayon.png: crayon-ff80141109408adbd241908ecff2b516.png
 rain.png: rain-62a0fbaf9f5b69fee2c8613197ff6f25.png
-application.css: application-d1908f71b56491690c2ea76e6e0f2e16.css
+application.css: application-646fd39272cc2310e71e109f1cd9eee2.css
 gmaps4rails/gmaps4rails.bing.js: gmaps4rails/gmaps4rails.bing-0b0638769720a376a57014e0c54b20c1.js
 sun.png: sun-75165a00d611222c6366211dfdf2440c.png
 cloud.png: cloud-85a5629a8b75801ad1e07fb06044630e.png
