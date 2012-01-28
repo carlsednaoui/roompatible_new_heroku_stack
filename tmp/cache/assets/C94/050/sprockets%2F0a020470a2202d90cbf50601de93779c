@@ -513,5 +513,5 @@
 }).call(this);
 "content_type"application/javascript"
 class"BundledAsset"
-mtime"2011-12-25T13:27:33-05:00"_version"%1c9609bc58b1e77c196de29021583379"id"%66107c0b33bc5d76f594a2be438b6277"dependency_paths[{"hexdigest"%28bd758c2ae2e7db44b014666bb7e7cb"
-mtimeu:	Time2ï€  n"	path"p/Library/Ruby/Gems/1.8/gems/gmaps4rails-1.3.2/app/assets/javascripts/gmaps4rails/gmaps4rails.base.js.coffee"pathname"p/Library/Ruby/Gems/1.8/gems/gmaps4rails-1.3.2/app/assets/javascripts/gmaps4rails/gmaps4rails.base.js.coffee"logical_path"$gmaps4rails/gmaps4rails.base.js:@expires_in0:@compressedF:@created_atf1327773694.019628 A–
+mtime"2011-12-25T13:27:33-05:00"_version"%46dde6621c301f4928e3b34efee9e3b5"id"%474c09603fc2d1b44e422f1662824856"dependency_paths[{"hexdigest"%2679fdfc4297b77376b995eeb8fca5d3"
+mtimeu:	Time2ï€  n"	path"p/Library/Ruby/Gems/1.8/gems/gmaps4rails-1.3.2/app/assets/javascripts/gmaps4rails/gmaps4rails.base.js.coffee"pathname"p/Library/Ruby/Gems/1.8/gems/gmaps4rails-1.3.2/app/assets/javascripts/gmaps4rails/gmaps4rails.base.js.coffee"logical_path"$gmaps4rails/gmaps4rails.base.js:@expires_in0:@compressedF:@created_atf1327777207.4085889 &R
