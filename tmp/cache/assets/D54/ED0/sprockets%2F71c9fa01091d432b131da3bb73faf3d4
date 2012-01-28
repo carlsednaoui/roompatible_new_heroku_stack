@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@value{	"_version"%d473dac1429a3ee552c8f64e4463a781"digest"%42e8ca329bf5930da88f0b803ba953c2"lengthi…‚"source"…‚/*
+o: ActiveSupport::Cache::Entry	:@value{	"_version"%287cade3e75d7ab16964dbfda26b4864"digest"%6a65f31b637554ec82094ad595686162"lengthiÀ‚"source"À‚/*
 */
 
 /*!
@@ -2397,7 +2397,7 @@ Main CSS
 body {
 	background-color: #e4eff7;
 	background-image: url('../assets/bcg-pattern.png');
-	font-family: 'Lusitana', serif;
+	font-family: 'Lusitana', normal;
 	font-size: 17px;
 }
 
@@ -2426,7 +2426,7 @@ footer p {
 h1 {
 	font-size: 2em;
 	color: #393e46;
-	font-family: 'Quattrocento', serif;
+	font-family: 'Quattrocento', normal;
 }
 
 h1 small {
@@ -2640,4 +2640,4 @@ Room Listing
 	font-size: 2em;
 	margin-bottom: 0em;
 }
-:@expires_in0:@compressedF:@created_atf1327770760.3190179 j 
+:@expires_in0:@compressedF:@created_atf1327770980.7677331 "ä
