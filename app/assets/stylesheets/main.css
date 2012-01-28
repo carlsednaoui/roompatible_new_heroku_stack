@@ -4,7 +4,8 @@ Main CSS
 
 body {
 	background-color: #e4eff7;
-	background-image: url('../assets/bcg-pattern-main-1ffafd48bf0485f0e5120b5e23a47442.png');
+	background-image: url('../assets/bcg-pattern-main.png');
+	background-repeat: repeat;
 	font-family: 'Lusitana', normal;
 	font-size: 17px;
 }
