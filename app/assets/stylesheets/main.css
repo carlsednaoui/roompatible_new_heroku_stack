@@ -51,7 +51,7 @@ h2 small {
 }
 
 p {
-	font-family: 'Lusitana', serif;
+	font-family: 'Lusitana', normal;
 	color: #5c676c;
 	font-size: 1.1em;
 	line-height: 1.4em;
@@ -62,14 +62,14 @@ li {
 }
 
 form {
-	font-family: 'Lusitana', serif;
+	font-family: 'Lusitana', normal;
 	color: #5c676c;
 	font-size: 1.2em;
 	line-height: 1.3em;
 }
 
 label {
-	font-family: 'Lusitana', serif;
+	font-family: 'Lusitana', normal;
 	color: #5c676c;
 	font-size: .8em;
 }

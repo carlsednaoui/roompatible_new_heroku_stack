@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@value{	"_version"%287cade3e75d7ab16964dbfda26b4864"digest"%6a65f31b637554ec82094ad595686162"lengthiÀ‚"source"À‚/*
+o: ActiveSupport::Cache::Entry	:@value{	"_version"%4de0d8e90f794a53a074f5421148da7e"digest"%b547cf4082001c50730746179eb5b456"lengthiŒ‚"source"Œ‚/*
 */
 
 /*!
@@ -2443,7 +2443,7 @@ h2 small {
 }
 
 p {
-	font-family: 'Lusitana', serif;
+	font-family: 'Lusitana', normal;
 	color: #5c676c;
 	font-size: 1.1em;
 	line-height: 1.4em;
@@ -2454,14 +2454,14 @@ li {
 }
 
 form {
-	font-family: 'Lusitana', serif;
+	font-family: 'Lusitana', normal;
 	color: #5c676c;
 	font-size: 1.2em;
 	line-height: 1.3em;
 }
 
 label {
-	font-family: 'Lusitana', serif;
+	font-family: 'Lusitana', normal;
 	color: #5c676c;
 	font-size: .8em;
 }
@@ -2640,4 +2640,4 @@ Room Listing
 	font-size: 2em;
 	margin-bottom: 0em;
 }
-:@expires_in0:@compressedF:@created_atf1327770980.7677331 "ä
+:@expires_in0:@compressedF:@created_atf1327771111.521678 c,
