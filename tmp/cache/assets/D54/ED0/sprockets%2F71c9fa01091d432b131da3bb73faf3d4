@@ -1,4 +1,5 @@
-o: ActiveSupport::Cache::Entry	:@value{	"_version"%312a7c0ff11988aafc6e89fc811e4ae0"digest"%4ba1158198e3c5c9c044fdb6b62cdb14"lengthi¿ã"source"¿ã/*
+o: ActiveSupport::Cache::Entry	:@value{	"_version"%57f67dd42e5fe272303550f25f7691a7"digest"%9b1fe8e3babc0127f5ccc6225c59283f"lengthi	ã"source"	ã/*
+*= http://fonts.googleapis.com/css?family=Lusitana|Quattrocento
 */
 
 /*!
@@ -2394,20 +2395,6 @@ Main CSS
 ***********************/
 
 
-@font-face {
-  font-family: "Lusitana";
-  src: url(/assets/lusitana.eot);
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Quattrocento";
-  src: url(/assets/quattrocento.eot);
-  font-weight: 900;
-  font-style: normal;
-}
-
 body {
 	background-color: #e4eff7;
 	background-image: url('../assets/bcg-pattern.png');
@@ -2654,4 +2641,4 @@ Room Listing
 	font-size: 2em;
 	margin-bottom: 0em;
 }
-:@expires_in0:@compressedF:@created_atf1327264741.4940929 Ÿ8
+:@expires_in0:@compressedF:@created_atf1327770154.857738 å.
