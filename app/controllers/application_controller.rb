@@ -34,7 +34,7 @@ class ApplicationController < ActionController::Base
     def require_current_user
         unless current_user
             flash[:error] = "You must be logged in"
-            redirect_to root_path
+            redirect_to "/sign-up"
         end
     end
 end
