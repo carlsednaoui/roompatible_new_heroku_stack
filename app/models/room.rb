@@ -1,5 +1,6 @@
 class Room < ActiveRecord::Base
     before_validation :create_location, :on=>:create
+    before_validation :update_location, :on=>:update
     validates_presence_of :title, :price, :address, :description, :location
     validates_associated :location
     belongs_to :user
@@ -10,6 +11,10 @@ class Room < ActiveRecord::Base
 
 
     def create_location
+       self.build_location :address=>address
+    end
+
+    def update_location
        self.build_location :address=>address
     end
 end
