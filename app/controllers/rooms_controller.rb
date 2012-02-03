@@ -113,7 +113,8 @@ class RoomsController < ApplicationController
                 format.xml  { render :xml => @room.errors, :status => :unprocessable_entity }
             end
         end
-        Location.new_location(@room.address, @room.id)
+	#TO DELETE
+        #Location.new_location(@room.address, @room.id)
     end
 
     def update

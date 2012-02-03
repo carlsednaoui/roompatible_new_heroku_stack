@@ -17,13 +17,14 @@ class Location < ActiveRecord::Base
         address
     end
 
-    def self.new_location(location_address, location_room_id)
-        create_new_location = Location.new
-        create_new_location.address = location_address
-        create_new_location.room_id = location_room_id
-        begin
-            create_new_location.save!
-        rescue
-        end
-    end
+    #TO DELETE
+    #def self.new_location(location_address, location_room_id)
+    #    create_new_location = Location.new
+    #    create_new_location.address = location_address
+    #    create_new_location.room_id = location_room_id
+    #    begin
+    #        create_new_location.save!
+    #    rescue
+    #    end
+    #end
 end
