@@ -107,7 +107,7 @@
             <br />
             <div class="form-stacked">
                 <%= f.label :address, "Please insert the room's address (or nearby street intersection)" %>
-                <%= f.text_field :address, :class => "span8" %>
+		<%= f.text_field :address, :class => "span8", :placeholder => "Sample Address Format: 300 Graham Avenue, Brooklyn, New York" %>
                 <span class="help-block">Note: The exact address will not be displayed, we will show a nearby area. See example below.</span>
                 <br />
                 <div class="span16">
