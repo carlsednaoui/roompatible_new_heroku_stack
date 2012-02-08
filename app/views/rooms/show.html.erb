@@ -40,7 +40,7 @@
                 <%= link_to image_tag("http://api.twitter.com/1/users/profile_image/#{@room.user.uid}?size=bigger", :size => "75x75", :class => "user_picture"), "http://www.twitter.com/#{@room.user.nickname}", :target => "_blank" %>
                 <h2 class="user_picture"><small><%= link_to "View Profile", "http://www.twitter.com/#{@room.user.nickname}", :target => "_blank" %></small></h2>
             <% elsif @room.user.provider.eql? "facebook" %>
-                <%= link_to image_tag("http://graph.facebook.com/#{@room.user.uid}/picture?type=normal", :size => "75x75", :class => "user_picture"), "http://www.facebook.com/#{@room.user.uid}", :target => "_blank" %>
+                <%= link_to image_tag("http://graph.facebook.com/#{@room.user.uid}/picture", :size => "75x75", :class => "user_picture"), "http://www.facebook.com/#{@room.user.uid}", :target => "_blank" %>
             <h2 class="user_picture"><small><%= link_to "View Profile", "http://www.facebook.com/#{@room.user.uid}", :target => "_blank" %></small></h2>
             <% end %>
             <% end %>
