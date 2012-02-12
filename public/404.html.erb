@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The page you were looking for doesn't exist (404)</title>
+		<!--Main CSS Stylesheet is below - saved in public/stylesheets-->
+		<%= stylesheet_link_tag "application" %>
+		<%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lusitana|Quattrocento" %>
+
+		<!--Below is the Google Analytics tracking code-->
+  <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-25123782-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	   })();
+
+</script>
+<!--Above is the Google Analytics tracking code-->
+
+</head>
+
+<body>
+  <!-- This file lives in public/404.html -->
+  <div class="dialog">
+    <h1>Hmm, this is sketchy... the page you are looking for does not exist.</h1>
+    <p>Stay away from sketchy stuff and go back to <a href="http://www.roompatible.com">Roompatible</a>.</p>
+    <%= image_tag("fail_404.gif") %>
+	<p>PS: Thanks for using Roompatible - #YouRock!</p>
+  </div>
+</body>
+</html>
