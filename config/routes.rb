@@ -31,6 +31,7 @@ Roompatible::Application.routes.draw do
     match "/score" => "home#score"
     match "/complete" => "take#complete"
     match "/notify" => "take#notify"
+    match "/welcome" => "home#welcome"
 
     #Top nav
     match "/contact" => "home#contact"
