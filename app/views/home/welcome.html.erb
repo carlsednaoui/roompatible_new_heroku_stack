@@ -1,0 +1,28 @@
+<h1>Roompatible helps you find compatible roommates</h1>
+<p>No more creepy Craigslist posts. No more moving in with total strangers. Completely FREE.</p>
+<br />
+<div class="row">
+	<div class="span12">
+		<%= link_to image_tag("roompatible-3-steps.png"), "/sign-up" %>
+	</div>
+	<div class="span4">
+		<br />
+		<% if current_user %>
+		<% else %>
+			<a class="btn large primary padding" href="/sign-up">Log In/ Sign up</a>
+		<% end %>
+	</div>
+	<div class="span4">
+		<a href="/rooms" class="btn large default padding">View all Rooms</a>
+		<% if current_user %>
+			<a href="/rooms/new" class="btn large primary padding">Submit a Room</a>
+		<% else %>
+		<% end %>
+	</div>
+</div>
+<h1 class="offset1"><small>*Spamming is wack. We will <strong>never</strong> Tweet, post, or share anything on your behalf.<small></h1>
+		<br />
+		<div class="row">
+			<p class="span16">Roompatible is the free and easy way to find compatible roommates. Simply log in with Facebook or Twitter, answer a few questions and you are ready to go. You will be all set in under 2 minutes!</p>
+		</div>
+
