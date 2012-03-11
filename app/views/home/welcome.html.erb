@@ -1,26 +1,35 @@
 <h1>Roompatible helps you find compatible roommates</h1>
-<p>No more creepy Craigslist posts. No more moving in with total strangers. Completely FREE.</p>
+<p>No more creepy Craigslist posts. No more moving in with total strangers. Yes, it's free & easy.</p>
 <br />
 <div class="row">
 	<div class="span12">
-		<%= link_to image_tag("roompatible-3-steps.png"), "/sign-up" %>
+		<iframe width="675" height="400" src="http://www.youtube.com/embed/jnPdLdAtNbs?hl=en&fs=1" frameborder="0" allowfullscreen></iframe>
+		<% link_to image_tag("roompatible-3-steps.png"), "/sign-up" %>
 	</div>
 	<div class="span4">
 		<br />
 		<% if current_user %>
+			<a href="/rooms/new" class="btn large primary padding">Submit a Room</a>
+			<a href="/rooms" class="btn large default padding">View all Rooms</a>
 		<% else %>
-			<a class="btn large primary padding" href="/sign-up">Log In/ Sign up</a>
+			<a href="/rooms" class="btn large primary padding span2">View all Rooms</a>
+			<a class="btn large success padding span2" href="/sign-up">Log In/ Sign up</a>
 		<% end %>
 	</div>
+
 	<div class="span4">
-		<a href="/rooms" class="btn large default padding">View all Rooms</a>
-		<% if current_user %>
-			<a href="/rooms/new" class="btn large primary padding">Submit a Room</a>
-		<% else %>
-		<% end %>
+	<br />
+		<p>Sign up to</p>
+		<ul>
+			<li>Post Rooms</li>
+			<li>Message Users</li>
+			<li>View Full User Profiles</li>
+			<li>Post Rommate Requests</li>
+
+
+		</ul>
 	</div>
 </div>
-<h1 class="offset1"><small>*Spamming is wack. We will <strong>never</strong> Tweet, post, or share anything on your behalf.<small></h1>
 		<br />
 		<div class="row">
 			<p class="span16">Roompatible is the free and easy way to find compatible roommates. Simply log in with Facebook or Twitter, answer a few questions and you are ready to go. You will be all set in under 2 minutes!</p>
