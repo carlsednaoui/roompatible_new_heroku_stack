@@ -32,6 +32,7 @@ Roompatible::Application.routes.draw do
     match "/complete" => "take#complete"
     match "/notify" => "take#notify"
     match "/welcome" => "home#welcome"
+    match "/privacy" => "home#privacy"
 
     #Top nav
     match "/contact" => "home#contact"
